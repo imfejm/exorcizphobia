@@ -82,7 +82,8 @@ if (merchBanner) {
       });
     },
     {
-      threshold: 0.2, // spustí animaci když je 20% banneru viditelné
+      threshold: 0.1,
+      rootMargin: "0px 0px -100px 0px", // spustí animaci 100px předtím
     }
   );
 
