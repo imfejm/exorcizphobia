@@ -55,10 +55,10 @@ function checkAnimationVisibility() {
   const visibilityPercentage = (visibleHeight / totalHeight) * 100;
 
   // Když je viditelnost 50% nebo méně, zastaví animaci
-  if (visibilityPercentage <= 50 && visibilityPercentage > 0) {
+  if (visibilityPercentage <= 50) {
     black.classList.add("paused");
     logoB.classList.add("paused");
-  } else if (visibilityPercentage > 50) {
+  } else {
     black.classList.remove("paused");
     logoB.classList.remove("paused");
   }
@@ -67,3 +67,24 @@ function checkAnimationVisibility() {
 window.addEventListener("scroll", checkAnimationVisibility);
 window.addEventListener("resize", checkAnimationVisibility);
 checkAnimationVisibility();
+
+//animace příjezdu merchbanner zprava
+const merchBanner = document.querySelector(".merchbanner");
+
+if (merchBanner) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("slide-in");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.2, // spustí animaci když je 20% banneru viditelné
+    }
+  );
+
+  observer.observe(merchBanner);
+}
