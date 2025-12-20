@@ -270,7 +270,7 @@ a.nav-link {
 .nav-link {
   text-align: left;
   text-decoration: none;
-  font-family: quicksand;
+  font-family: sansation, sans-serif;
   font-size: 1.6rem;
   color: #cb2026;
 
@@ -714,4 +714,110 @@ footer a {
 
 footer a:hover {
   color: #f2ecec;
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #070c12;
+  }
+
+  .line {
+    background-color: #070c12;
+  }
+
+  .menu a {
+    color: #f2ecec;
+  }
+
+  .cara1,
+  .cara3 {
+    background-color: #f2ecec;
+  }
+
+  .lang-btn {
+    color: #f2ecec;
+  }
+
+  .lang-btn:hover {
+    color: #070c12;
+  }
+
+  .lang-btn.active {
+    color: #070c12;
+  }
+
+  .nav {
+    background-color: #070c12;
+    
+  }
+
+  .black {
+    background-color: #f2ecec;
+  }
+
+  .koncerty {
+    background-color: #070c12;
+    color:#f2ecec;
+  }
+
+  .merchbanner {
+    background-color: #070c12;
+  }
+
+  .merchlink:hover {
+    color: #070c12;
+  }
+
+  .biotext {
+    color: #f2ecec;
+  }
+
+  .mediabanner {
+    background-color: #070c12;
+  }
+  .members{
+    color:#f2ecec;
+  }
+
+  .medialink:hover {
+    color: #070c12;
+  }
+
+  .organizerbanner {
+    background-color: #070c12;
+  }
+
+  .organizerlink:hover {
+    color: #070c12;
+  }
+
+  .contact {
+    background-color: #363636;
+    color:#f2ecec;
+  }
+
+  footer {
+    background-color: #363636;
+    color: #f2ecec;
+  }
+
+  footer a:hover {
+    color:#f2ecec;
+  }
+
+  /* Invert SVG colors for dark mode */
+  .memberimg,
+  .logoblack,
+  .merchimg,
+  .mediaimg,
+  .organizerimg,
+  .uvod {
+    filter: invert(1);
+  }
+
+  /* Counter-invert logo to keep it white blinking in dark mode */
+  .logoB {
+    filter: invert(1);
+  }
 }
