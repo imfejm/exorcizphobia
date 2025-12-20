@@ -82,8 +82,8 @@ if (merchBanner) {
       });
     },
     {
-      threshold: 0.1,
-      rootMargin: "0px 0px -100px 0px", // spustí animaci 100px předtím
+      threshold: 0,
+      rootMargin: "0px"
     }
   );
 

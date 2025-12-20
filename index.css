@@ -393,7 +393,7 @@ h2 {
   gap: 0.5rem 1rem;
   transform: translateX(100%);
   opacity: 0;
-  transition: transform 1.8s ease-out, opacity 6s ease-out;
+  transition: transform 1.8s ease-out, opacity 1.8s ease-out;
   position: relative;
 }
 
@@ -407,7 +407,6 @@ h2 {
 }
 
 .merchimg {
-  max-width: 80%;
   height: auto;
   object-fit: contain;
 }
