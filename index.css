@@ -72,7 +72,7 @@ body {
 .menu a {
   color: #070c12;
   text-decoration: none;
-  font-size: 2vw;
+  font-size: 1.8vw;
   font-family: rubik distressed;
   font-weight: 300;
   padding-left: 0.3em;
@@ -93,11 +93,6 @@ body {
   .menu {
     display: none;
   }
-}
-
-a.kontakt {
-  color: #cb2026;
-  font-weight: 300;
 }
 
 .ham {
@@ -700,4 +695,23 @@ h2 {
   .contact img {
     width: 60px;
   }
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 2rem 0;
+  background-color: #070c12;
+  color: #f2ecec;
+  font-size: 14px;
+}
+
+footer a {
+  color: #cb2026;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #f2ecec;
 }
