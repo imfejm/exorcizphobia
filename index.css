@@ -602,7 +602,7 @@ h2 {
 }
 
 .organizerbanner {
-display: grid;
+  display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: 1fr;
   justify-items: center;
@@ -658,5 +658,39 @@ display: grid;
     gap: 2rem;
     width: 100%;
     padding: 2rem;
+  }
+}
+
+.contact {
+  width: 100%;
+  text-align: center;
+  padding: 2rem 0;
+  background-color: #070c12;
+  color: #f2ecec;
+}
+.contact img {
+  width: 40px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+@media only screen and (min-width: 800px) {
+  .contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    padding: 2rem 0;
+    justify-items: center;
+  }
+
+  .socialmedia {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact img {
+    width: 60px;
   }
 }
