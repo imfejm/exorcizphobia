@@ -89,3 +89,30 @@ if (merchBanner) {
 
   observer.observe(merchBanner);
 }
+
+//animace příjezdu mediabanner zleva a organizerbanner zprava
+const mediaBanner = document.querySelector(".mediabanner");
+const organizerBanner = document.querySelector(".organizerbanner");
+
+const slideObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("slide-in");
+        slideObserver.unobserve(entry.target);
+      }
+    });
+  },
+  {
+    threshold: 0,
+    rootMargin: "0px"
+  }
+);
+
+if (mediaBanner) {
+  slideObserver.observe(mediaBanner);
+}
+
+if (organizerBanner) {
+  slideObserver.observe(organizerBanner);
+}
