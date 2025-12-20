@@ -673,6 +673,13 @@ h2 {
   height: auto;
   margin-bottom: 1rem;
 }
+.socialmedia {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+}
 
 @media only screen and (min-width: 800px) {
   .contact {
