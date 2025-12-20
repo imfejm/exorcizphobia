@@ -466,6 +466,33 @@ h2 {
   align-items: center;
   width: 100%;
   max-width: 350px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.member1.member-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0s;
+}
+
+.member2.member-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}
+
+.member3.member-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.4s;
+}
+
+.member4.member-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.6s;
 }
 
 .member1 .memberimg,
@@ -523,6 +550,9 @@ h2 {
     grid-template-columns: auto 1fr;
     gap: 1rem 4rem;
     align-items: center;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
   }
 
   .member1 .memberimg,

@@ -116,3 +116,25 @@ if (mediaBanner) {
 if (organizerBanner) {
   slideObserver.observe(organizerBanner);
 }
+
+//animace postupného objevování členů týmu
+const members = document.querySelectorAll(".member1, .member2, .member3, .member4");
+
+const memberObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("member-visible");
+        memberObserver.unobserve(entry.target);
+      }
+    });
+  },
+  {
+    threshold: 0.2,
+    rootMargin: "0px"
+  }
+);
+
+members.forEach((member) => {
+  memberObserver.observe(member);
+});
