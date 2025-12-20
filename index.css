@@ -374,6 +374,46 @@ h2 {
   text-transform: uppercase;
 }
 
+.ufoL {
+  width: 70px;
+  height: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  position: absolute;
+  top: 120%;
+  left: 3%;
+}
+.ufoP {
+  width: 70px;
+  height: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  position: absolute;
+  top: 145%;
+  right: -4%;
+}
+
+@media only screen and (min-width: 800px) {
+
+.ufoL {
+  width: auto;
+  height: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  position: absolute;
+  top: 120%;
+  left: 3%;
+}
+.ufoP {
+  width: auto;
+  height: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  position: absolute;
+  top: 145%;
+  right: -4%;
+}}
+
 .merchbanner {
   display: grid;
   grid-template-columns: auto auto;
@@ -790,7 +830,16 @@ footer a:hover {
     max-width: 1350px;
     margin: 0 auto;
   }
-
+  .ufoL {
+    width: 100px;
+    top: 110%;
+    left: 20%;
+  }
+  .ufoP {
+    width: 100px;
+    top: 130%;
+    right: 20%;
+  }
   .merchbanner {
     max-width: 1350px;
     margin: 0 auto;
@@ -926,7 +975,9 @@ footer a:hover {
   .merchimg,
   .mediaimg,
   .organizerimg,
-  .uvod {
+  .uvod,
+  .ufoL,
+  .ufoP {
     filter: invert(1);
   }
 
