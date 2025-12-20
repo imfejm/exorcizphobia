@@ -746,6 +746,91 @@ footer a:hover {
   color: #f2ecec;
 }
 
+/* Fix styles for viewports 1350px and above */
+@media only screen and (min-width: 1350px) {
+  body {
+    overflow-x: visible;
+    font-size: 20px;
+  }
+
+  .line {
+    overflow: visible;
+    max-width: 1350px;
+    margin: 0 auto;
+    height: 60px;
+  }
+
+  .menu a {
+    font-size: 24.3px;
+    margin: 13.5px;
+  }
+
+  .lang-btn {
+    font-size: 21.6px;
+  }
+
+  .uvod {
+    width: 100%;
+    max-width: 1350px;
+    margin: 0 auto;
+  }
+
+  .black {
+    width: 100%;
+  }
+
+  .biosection {
+    max-width: 1350px;
+    margin: 0 auto;
+  }
+  .biosection p {
+    font-size: 20px;
+  }
+  .koncerty {
+    max-width: 1350px;
+    margin: 0 auto;
+  }
+
+  .merchbanner {
+    max-width: 1350px;
+    margin: 0 auto;
+  }
+
+  .mediabanner {
+    max-width: 1350px;
+    margin: 0 auto;
+  }
+
+  .organizerbanner {
+    max-width: 1350px;
+    margin: 0 auto;
+  }
+
+  .infobanner {
+    max-width: 1350px;
+    margin: 0 auto;
+  }
+
+  .contact {
+    max-width: 1350px;
+    margin: 0 auto;
+  }
+
+  footer {
+    max-width: 1350px;
+    margin: 0 auto;
+  }
+  footer p {
+    font-size: 18px;
+  }
+
+  .stop {
+    max-width: 1350px;
+    margin: 0 auto;
+    height: 60px;
+  }
+}
+
 /* Dark Mode */
 @media (prefers-color-scheme: dark) {
   body {
@@ -779,7 +864,6 @@ footer a:hover {
 
   .nav {
     background-color: #070c12;
-    
   }
 
   .black {
@@ -788,7 +872,7 @@ footer a:hover {
 
   .koncerty {
     background-color: #070c12;
-    color:#f2ecec;
+    color: #f2ecec;
   }
 
   .merchbanner {
@@ -806,8 +890,8 @@ footer a:hover {
   .mediabanner {
     background-color: #070c12;
   }
-  .members{
-    color:#f2ecec;
+  .members {
+    color: #f2ecec;
   }
 
   .medialink:hover {
@@ -824,7 +908,7 @@ footer a:hover {
 
   .contact {
     background-color: #363636;
-    color:#f2ecec;
+    color: #f2ecec;
   }
 
   footer {
@@ -833,7 +917,7 @@ footer a:hover {
   }
 
   footer a:hover {
-    color:#f2ecec;
+    color: #f2ecec;
   }
 
   /* Invert SVG colors for dark mode */
