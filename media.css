@@ -377,10 +377,6 @@ h3 {
 .videa h2 {
   cursor: pointer;
   user-select: none;
-  transition: color 0.3s ease;
-}
-
-.videa h2:hover {
   color: #cb2026;
 }
 
@@ -402,4 +398,28 @@ h3 {
 .video4.show {
   max-height: 1000px;
   opacity: 1;
+}
+
+@media only screen and (min-width: 800px) {
+  .videa h2 {
+    display: none;
+  }
+  .yt-preview {
+    max-width: 60%;
+  }
+  .videa {
+    display: flex;
+    gap: 1rem;
+    padding: 2% 5%;
+  }
+  .videa img {
+    justify-content: baseline;
+    border-radius: 0;
+  }
+  .play-button {
+    font-size: 48px;
+  }
+  .video1 img {
+    padding-top: 18px;
+  }
 }
