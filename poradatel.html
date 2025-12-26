@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik+Distressed&family=Rubik+Glitch&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Exorcizphobia organizer</title>
+    <link rel="stylesheet" href="poradatel.css" />
+  </head>
+  <body>
+    <div class="line">
+      <h1>
+        <span class="visually-hidden">Exorcizphobia band</span>
+      </h1>
+      <img
+        src="img/LOGOCERVENE.svg"
+        alt="logo exorcizphobia small"
+        class="logoS"
+      />
+      <div class="menu">
+        <a href="index.html#bio" class="bio" data-key="nav.bio">bio</a>
+        <a href="index.html#koncerty" class="koncerty" data-key="nav.contact">koncerty</a>
+        <a href="merch.html" class="merch" data-key="nav.merch">merch</a>
+        <a href="index.html#kontakt" class="kontakt" data-key="nav.contact">kontakt</a>
+        <a href="media.html" class="media" data-key="nav.press">média</a>
+        <a href="poradatel.html" class="poradatel" data-key="nav.organizer"
+          >pořadatel</a
+        >
+        <div class="lang-switcher">
+          <button class="lang-btn" data-lang="cs">CZ</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+      </div>
+
+      <div class="ham" id="ham">
+        <div class="cara1" id="cara1"></div>
+        <div class="cara2" id="cara2"></div>
+        <div class="cara3" id="cara3"></div>
+      </div>
+    </div>
+
+    <div class="navigace small hidden" id="menu">
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#bio" data-key="nav.bio">bio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#koncerty" data-key="nav.contact"
+            >koncerty</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="merch.html" data-key="nav.merch">merch</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#kontakt" data-key="nav.contact">kontakt</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="media.html" data-key="nav.press">média</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="poradatel.html" data-key="nav.organizer"
+            >pořadatel</a
+          >
+        </li>
+        <li class="nav-item lang-switcher-mobile">
+          <button class="lang-btn" data-lang="cs">CZ</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </li>
+      </ul>
+    </div>
+    <script src="poradatel.js"></script>
+  </body>
+
+</html>
