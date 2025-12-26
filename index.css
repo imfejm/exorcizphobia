@@ -2,6 +2,8 @@
 
 html {
   box-sizing: border-box;
+  overflow-x: clip;
+  max-width: 100%;
 }
 *,
 ::after,
@@ -19,9 +21,9 @@ body {
   align-items: center;
   margin: 0;
   max-width: 100%;
-
+  width: 100%;
   font-weight: 400;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 .line {
@@ -714,6 +716,7 @@ h2 {
   flex-direction: column;
   width: 100%;
   padding: 0;
+  overflow-x: clip;
 }
 
 @media only screen and (min-width: 600px) {
@@ -789,7 +792,7 @@ footer a:hover {
 /* Fix styles for viewports 1350px and above */
 @media only screen and (min-width: 1350px) {
   body {
-    overflow-x: visible;
+    overflow-x: clip;
     font-size: 20px;
   }
 

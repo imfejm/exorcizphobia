@@ -37,3 +37,21 @@ function onScrollLogoS() {
 window.addEventListener("scroll", onScrollLogoS);
 window.addEventListener("resize", onScrollLogoS);
 onScrollLogoS();
+
+// Toggle videos visibility
+const videosHeading = document.querySelector('.videa h2');
+const arrow = document.querySelector('.videa h2 .arrow');
+const videos = document.querySelectorAll('.video1, .video2, .video3, .video4');
+
+if (videosHeading && arrow) {
+  videosHeading.addEventListener('click', () => {
+    const isShown = videos[0].classList.contains('show');
+
+    videos.forEach(video => {
+      video.classList.toggle('show');
+    });
+
+    // Change arrow direction
+    arrow.textContent = isShown ? '⇓' : '⇑';
+  });
+}

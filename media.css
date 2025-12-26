@@ -1,5 +1,7 @@
 html {
   box-sizing: border-box;
+  overflow-x: clip;
+  max-width: 100%;
 }
 *,
 ::after,
@@ -17,8 +19,9 @@ body {
   align-items: center;
   margin: 0;
   max-width: 100%;
+  width: 100%;
   font-weight: 400;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 .line {
@@ -334,4 +337,69 @@ h2 {
     padding: 0;
     margin: 0 0 1.5rem 0;
   }
+}
+
+.yt-preview {
+  position: relative;
+  display: block;
+  max-width: 80%;
+  cursor: pointer;
+  margin: 20px auto 0;
+}
+
+.yt-preview img {
+  display: block;
+  width: 100%;
+  border-radius: 12px;
+}
+
+.play-button {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 64px;
+  color: #cb2026;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  pointer-events: none;
+}
+
+h3 {
+  font-family: sansation, sans-serif;
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 65px;
+}
+
+/* Clickable h2 for videos toggle */
+.videa h2 {
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+.videa h2:hover {
+  color: #cb2026;
+}
+
+/* Hide videos by default */
+.video1,
+.video2,
+.video3,
+.video4 {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease, margin 0.5s ease;
+}
+
+/* Show videos when toggled */
+.video1.show,
+.video2.show,
+.video3.show,
+.video4.show {
+  max-height: 1000px;
+  opacity: 1;
 }
