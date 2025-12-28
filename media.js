@@ -73,3 +73,19 @@ if (podcastsHeading && podcastArrow) {
     podcastArrow.textContent = isShown ? '⇓' : '⇑';
   });
 }
+
+// Toggle infodownload visibility
+const infodownloadHeading = document.querySelector('.infodownload h2');
+const infodownloadArrow = document.querySelector('.infodownload h2 .arrow');
+const infodownloadUl = document.querySelector('.infodownload ul');
+
+if (infodownloadHeading && infodownloadArrow && infodownloadUl) {
+  infodownloadHeading.addEventListener('click', () => {
+    const isShown = infodownloadUl.classList.contains('show');
+
+    infodownloadUl.classList.toggle('show');
+
+    // Change arrow direction
+    infodownloadArrow.textContent = isShown ? '⇓' : '⇑';
+  });
+}
