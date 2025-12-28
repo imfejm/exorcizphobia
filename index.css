@@ -320,8 +320,9 @@ a.nav-link {
 .logoB {
   opacity: 0;
   animation: logoBlink 3s linear infinite;
-  max-width: 90%;
-  max-height: auto;
+  width: 80vw;
+  max-width: 800px;
+  height: auto;
   object-fit: contain;
 }
 
