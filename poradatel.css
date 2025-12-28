@@ -286,3 +286,101 @@ a.nav-link {
 .hidden {
   display: none;
 }
+
+.poradatel {
+  width: 100%;
+  text-align: center;
+  padding: 2rem 0;
+  background-color: #f2ecec;
+  color: #070c12;
+}
+h2 {
+  font-family: sansation, sans-serif;
+  font-size: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 65px;
+}
+
+h3 {
+  font-family: sansation, sans-serif;
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 65px;
+}
+
+.poradatel a{
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: #070c12;
+}
+.poradatel a:hover {
+  color: #cb2026;
+}
+
+.contact {
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #070c12;
+  color: #f2ecec;
+}
+.contact h2 {
+  font-family: sansation, sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  padding: 1rem;
+}
+.contact img {
+  width: 50px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+.socialmedia {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+@media only screen and (min-width: 800px) {
+  .contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    padding: 2rem 0;
+    justify-items: center;
+  }
+
+  .socialmedia {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact img {
+    width: 60px;
+  }
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 2rem 0;
+  background-color: #070c12;
+  color: #f2ecec;
+  font-size: 14px;
+}
+
+footer a {
+  color: #cb2026;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #f2ecec;
+}
