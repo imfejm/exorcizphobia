@@ -384,3 +384,65 @@ footer a {
 footer a:hover {
   color: #f2ecec;
 }
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #070c12;
+  }
+
+  .line {
+    background-color: #070c12;
+  }
+
+  .menu a {
+    color: #f2ecec;
+  }
+
+  .cara1,
+  .cara3 {
+    background-color: #f2ecec;
+  }
+
+  .lang-btn {
+    color: #f2ecec;
+  }
+
+  .lang-btn:hover {
+    color: #070c12;
+  }
+
+  .lang-btn.active {
+    color: #070c12;
+  }
+
+  .nav {
+    background-color: #070c12;
+  }
+  .poradatel {
+    background-color:#070c12;
+    color: #f2ecec;
+  }
+  .poradatel a{
+    color: #f2ecec;
+    }
+
+  h2{
+    color: #f2ecec;
+  }
+  h3{
+    color:#cb2026;
+  }
+  .contact {
+    background-color: #363636;
+    color: #f2ecec;
+  }
+
+  footer {
+    background-color: #363636;
+    color: #f2ecec;
+  }
+
+  footer a:hover {
+    color: #f2ecec;
+  }}
