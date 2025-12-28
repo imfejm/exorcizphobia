@@ -400,14 +400,46 @@ h3 {
   opacity: 1;
 }
 
+/* Clickable h2 for podcast toggle */
+.podcast h2 {
+  cursor: pointer;
+  user-select: none;
+  color: #cb2026;
+}
+
+/* Hide podcasts by default */
+.podcast1,
+.podcast2,
+.podcast3 {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease, margin 0.5s ease;
+}
+
+/* Show podcasts when toggled */
+.podcast1.show,
+.podcast2.show,
+.podcast3.show {
+  max-height: 1000px;
+  opacity: 1;
+}
+
 @media only screen and (min-width: 800px) {
-  .videa h2 {
+  .videa h2,
+  .podcast h2 {
     display: none;
   }
   .video1,
   .video2,
   .video3,
   .video4 {
+    max-height: none;
+    opacity: 1;
+  }
+  .podcast1,
+  .podcast2,
+  .podcast3 {
     max-height: none;
     opacity: 1;
   }
@@ -428,5 +460,14 @@ h3 {
   }
   .video1 img {
     padding-top: 18px;
+  }
+  .podcast {
+    display: flex;
+    gap: 1rem;
+    padding: 2% 5%;
+  }
+  .podcast img {
+    justify-content: baseline;
+    border-radius: 0;
   }
 }

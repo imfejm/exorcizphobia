@@ -55,3 +55,21 @@ if (videosHeading && arrow) {
     arrow.textContent = isShown ? '⇓' : '⇑';
   });
 }
+
+// Toggle podcasts visibility
+const podcastsHeading = document.querySelector('.podcast h2');
+const podcastArrow = document.querySelector('.podcast h2 .arrow');
+const podcasts = document.querySelectorAll('.podcast1, .podcast2, .podcast3');
+
+if (podcastsHeading && podcastArrow) {
+  podcastsHeading.addEventListener('click', () => {
+    const isShown = podcasts[0].classList.contains('show');
+
+    podcasts.forEach(podcast => {
+      podcast.classList.toggle('show');
+    });
+
+    // Change arrow direction
+    podcastArrow.textContent = isShown ? '⇓' : '⇑';
+  });
+}
