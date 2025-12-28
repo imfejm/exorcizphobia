@@ -561,6 +561,34 @@ footer a {
 footer a:hover {
   color: #f2ecec;
 }
+
+/* Fix styles for viewports 1350px and above */
+@media only screen and (min-width: 1350px) {
+  body {
+    overflow-x: clip;
+    font-size: 20px;
+  }
+
+  .line {
+    overflow: visible;
+    max-width: 1350px;
+    margin: 0 auto;
+    height: 60px;
+  }
+
+  .menu a {
+    font-size: 24.3px;
+    margin: 13.5px;
+  }
+
+  .lang-btn {
+    font-size: 21.6px;
+  }
+.celek{
+    max-width: 1350px;
+    margin: 0 auto;
+  }
+
 .contact {
     max-width: 1350px;
     margin: 0 auto;
@@ -572,4 +600,69 @@ footer a:hover {
   }
   footer p {
     font-size: 18px;
+  }}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #070c12;
+  }
+
+  .line {
+    background-color: #070c12;
+  }
+
+  .menu a {
+    color: #f2ecec;
+  }
+
+  .cara1,
+  .cara3 {
+    background-color: #f2ecec;
+  }
+
+  .lang-btn {
+    color: #f2ecec;
+  }
+
+  .lang-btn:hover {
+    color: #070c12;
+  }
+
+  .lang-btn.active {
+    color: #070c12;
+  }
+
+  .nav {
+    background-color: #070c12;
+  }
+
+  h2{
+    color: #f2ecec;
+  }
+  h3{
+    color: #f2ecec;
+  }
+  .text p {
+    color: #f2ecec;
+  } 
+
+  .infodownload a{
+    color: #f2ecec;
+  }
+  .infodownload a:hover {
+    color: #cb2026;
+  }
+.contact {
+    background-color: #363636;
+    color: #f2ecec;
+  }
+
+  footer {
+    background-color: #363636;
+    color: #f2ecec;
+  }
+
+  footer a:hover {
+    color: #f2ecec;
   }
