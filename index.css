@@ -293,13 +293,13 @@ a.nav-link {
   width: 100%;
   height: 90vh;
   background-image: url("img/NeurosisUnbound.svg");
-  background-size: auto 100%;
+  background-size: contain auto 100%;
   background-repeat: no-repeat;
   background-position: center;
 }
 .black {
   width: 100%;
-  height: 100vh;
+  height: 90vh;
   background-color: #070c12;
   opacity: 0;
   animation: blackBlink 3s linear infinite;
@@ -361,8 +361,14 @@ a.nav-link {
 
 @media only screen and (min-width: 500px) {
   .uvod {
-   height: 100vh;
+    height: 100vh;
+    background-size:  auto 100%;
   }
+  .black {
+    height: 100vh;
+  }
+
+
 }
 
 .stop {
@@ -491,25 +497,25 @@ h2 {
 }*/
 
 @media only screen and (min-width: 800px) {
-
-.ufoL {
-  width: auto;
-  height: auto;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  position: absolute;
-  top: 120%;
-  left: 3%;
+  .ufoL {
+    width: auto;
+    height: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    position: absolute;
+    top: 120%;
+    left: 3%;
+  }
+  .ufoP {
+    width: auto;
+    height: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    position: absolute;
+    top: 145%;
+    right: 3%;
+  }
 }
-.ufoP {
-  width: auto;
-  height: auto;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  position: absolute;
-  top: 145%;
-  right: 3%;
-}}
 
 .merchbanner {
   display: grid;
