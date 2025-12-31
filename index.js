@@ -181,17 +181,19 @@ function displayEntries(entries, entriesTable) {
   entriesBody.innerHTML = "";
 
   entries.forEach((entry) => {
-    // Format date to Czech format (den.měsíc.rok)
+    // Format date to Czech format (den. měsíc. rok)
     const date = new Date(entry.date);
-    const formattedDate = date.toLocaleDateString('cs-CZ');
+    const day = date.getDate();
+    const month = date.getMonth() + 1;
+    const year = date.getFullYear();
 
     const row = document.createElement("tr");
     row.innerHTML = `
-            <td><strong>${formattedDate}</strong></td>
+            <td><strong>${day}. ${month}. ${year}</strong></td>
             <td>${entry.town}</td>
             <td>${entry.venue}</td>
             <td>${entry.description}</td>
-            <td>${entry.link}</td>
+            <td>${entry.link ? `<a href="${entry.link}" target="_blank" rel="noopener noreferrer">web události →</a>` : ''}</td>
         `;
     entriesBody.appendChild(row);
   });

@@ -381,12 +381,31 @@ a.nav-link {
 .entriesTable {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
 }
 
 .entriesTable td,
 .entriesTable th {
   padding: 0.5rem;
   text-align: left;
+}
+
+.entriesTable td:nth-child(2),
+.entriesTable td:nth-child(3) {
+  font-family: sansation, sans-serif;
+}
+
+.entriesTable td:nth-child(3) {
+  color: #cb2026;
+}
+
+.entriesTable a {
+  color: #f2ecec;
+  text-decoration: underline;
+}
+
+.entriesTable a:hover {
+  color: #cb2026;
 }
 
 /* Responzivní zobrazení tabulky */
