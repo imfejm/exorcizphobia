@@ -370,6 +370,75 @@ a.nav-link {
   background-color: #f2ecec;
   text-align: center;
 }
+
+.card {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.entriesTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.entriesTable td,
+.entriesTable th {
+  padding: 0.5rem;
+  text-align: left;
+}
+
+/* Responzivní zobrazení tabulky */
+@media only screen and (max-width: 800px) {
+  .entriesTable thead {
+    display: none;
+  }
+
+  .entriesTable,
+  .entriesTable tbody,
+  .entriesTable tr {
+    display: block;
+    width: 100%;
+  }
+
+  .entriesTable tr {
+    margin-bottom: 1.5rem;
+    border: 1px solid #cb2026;
+    padding: 0.5rem;
+  }
+
+  .entriesTable td {
+    display: block;
+    text-align: left;
+    padding: 0.3rem 0.5rem;
+    border: none;
+  }
+
+  .entriesTable td:first-child {
+    display: inline-block;
+    width: auto;
+    margin-right: 1rem;
+  }
+
+  .entriesTable td:nth-child(2) {
+    display: inline-block;
+    width: auto;
+  }
+
+  .entriesTable td:nth-child(3) {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .entriesTable td:nth-child(4),
+  .entriesTable td:nth-child(5) {
+    display: block;
+    width: 100%;
+  }
+}
+
 h2 {
   font-family: sansation, sans-serif;
   font-size: 18px;
@@ -834,6 +903,18 @@ footer a:hover {
     max-width: 1350px;
     margin: 0 auto;
   }
+  .card {
+    font-size: 20px;
+  }
+  .entriesTable {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .entriesTable td,
+  .entriesTable th {
+    padding: 0.5rem;
+  }
+
   .ufoL {
     width: 100px;
     top: 110%;

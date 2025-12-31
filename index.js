@@ -50,7 +50,8 @@ function checkAnimationVisibility() {
   const windowHeight = window.innerHeight;
 
   // Vypočítá, kolik % sekce je viditelné
-  const visibleHeight = Math.min(rect.bottom, windowHeight) - Math.max(rect.top, 0);
+  const visibleHeight =
+    Math.min(rect.bottom, windowHeight) - Math.max(rect.top, 0);
   const totalHeight = rect.height;
   const visibilityPercentage = (visibleHeight / totalHeight) * 100;
 
@@ -83,7 +84,7 @@ if (merchBanner) {
     },
     {
       threshold: 0,
-      rootMargin: "0px"
+      rootMargin: "0px",
     }
   );
 
@@ -105,7 +106,7 @@ const slideObserver = new IntersectionObserver(
   },
   {
     threshold: 0,
-    rootMargin: "0px"
+    rootMargin: "0px",
   }
 );
 
@@ -118,7 +119,9 @@ if (organizerBanner) {
 }
 
 //animace postupného objevování členů týmu
-const members = document.querySelectorAll(".member1, .member2, .member3, .member4");
+const members = document.querySelectorAll(
+  ".member1, .member2, .member3, .member4"
+);
 
 const memberObserver = new IntersectionObserver(
   (entries) => {
@@ -131,10 +134,68 @@ const memberObserver = new IntersectionObserver(
   },
   {
     threshold: 0.2,
-    rootMargin: "0px"
+    rootMargin: "0px",
   }
 );
 
 members.forEach((member) => {
   memberObserver.observe(member);
 });
+
+// Load Entries
+async function loadEntries() {
+  const ENDPOINT = "https://exorcizphobia.com/server.php";
+  const tableLoading = document.querySelector(".tableLoading");
+  const entriesTable = document.querySelector(".entriesTable");
+
+  tableLoading.classList.remove("hidden");
+  entriesTable.classList.add("hidden");
+
+  try {
+    const response = await fetch(ENDPOINT, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        action: "load",
+      }),
+    });
+
+    const data = await response.json();
+
+    if (response.ok) {
+      displayEntries(data || [], entriesTable);
+    } else {
+      displayEntries([], entriesTable);
+    }
+  } finally {
+    tableLoading.classList.add("hidden");
+    entriesTable.classList.remove("hidden");
+  }
+}
+
+// Display Entries in Table
+function displayEntries(entries, entriesTable) {
+  const entriesBody = document.querySelector(".entriesBody");
+  entriesBody.innerHTML = "";
+
+  entries.forEach((entry) => {
+    // Format date to Czech format (den.měsíc.rok)
+    const date = new Date(entry.date);
+    const formattedDate = date.toLocaleDateString('cs-CZ');
+
+    const row = document.createElement("tr");
+    row.innerHTML = `
+            <td><strong>${formattedDate}</strong></td>
+            <td>${entry.town}</td>
+            <td>${entry.venue}</td>
+            <td>${entry.description}</td>
+            <td>${entry.link}</td>
+        `;
+    entriesBody.appendChild(row);
+  });
+}
+
+// Load entries on page load
+loadEntries();
