@@ -379,6 +379,7 @@ a.nav-link {
   height: auto;
   background-color: #f2ecec;
   text-align: center;
+  padding-top: 10vh;
 }
 
 .card {
