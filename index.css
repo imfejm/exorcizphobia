@@ -381,7 +381,12 @@ a.nav-link {
   text-align: center;
   padding-top: 10vh;
 }
-
+.koncerty h2 {
+  font-family: sansation, sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  padding-top: 3rem;
+}
 .card {
   width: 90%;
   max-width: 1200px;
