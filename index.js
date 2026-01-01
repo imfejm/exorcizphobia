@@ -142,6 +142,56 @@ members.forEach((member) => {
   memberObserver.observe(member);
 });
 
+// Setup Show More Button for Concerts
+function setupShowMoreButton(totalEntries) {
+  const card = document.querySelector(".koncerty .card");
+
+  // Remove existing button if it exists
+  const existingBtn = document.querySelector(".showMoreBtn");
+  if (existingBtn) {
+    existingBtn.remove();
+  }
+
+  // Only create button if there are more than 4 entries
+  if (totalEntries <= 4) {
+    return;
+  }
+
+  // Create the button
+  const showMoreBtn = document.createElement("button");
+  showMoreBtn.className = "showMoreBtn";
+  showMoreBtn.textContent = "více";
+
+  // Add button to the card
+  card.appendChild(showMoreBtn);
+
+  // Add click event listener
+  showMoreBtn.addEventListener("click", () => {
+    const expandableRows = document.querySelectorAll('.entriesTable tr[data-expandable="true"]');
+    const isExpanded = showMoreBtn.classList.contains("expanded");
+
+    expandableRows.forEach((row) => {
+      if (isExpanded) {
+        // Collapse - hide rows again
+        row.classList.add("hidden-row");
+      } else {
+        // Expand - show rows
+        row.classList.remove("hidden-row");
+      }
+    });
+
+    // Toggle button state
+    showMoreBtn.classList.toggle("expanded");
+
+    // Change button text
+    if (showMoreBtn.classList.contains("expanded")) {
+      showMoreBtn.textContent = "méně";
+    } else {
+      showMoreBtn.textContent = "více";
+    }
+  });
+}
+
 // Load Entries
 async function loadEntries() {
   const ENDPOINT = "https://exorcizphobia.com/server.php";
@@ -180,7 +230,7 @@ function displayEntries(entries, entriesTable) {
   const entriesBody = document.querySelector(".entriesBody");
   entriesBody.innerHTML = "";
 
-  entries.forEach((entry) => {
+  entries.forEach((entry, index) => {
     // Format date to Czech format (den. měsíc. rok)
     const date = new Date(entry.date);
     const day = date.getDate();
@@ -188,6 +238,13 @@ function displayEntries(entries, entriesTable) {
     const year = date.getFullYear();
 
     const row = document.createElement("tr");
+
+    // Add hidden-row class and data attribute to rows after the 4th one (index > 3)
+    if (index > 3) {
+      row.classList.add("hidden-row");
+      row.setAttribute("data-expandable", "true");
+    }
+
     row.innerHTML = `
             <td><strong>${day}. ${month}. ${year}</strong></td>
             <td>${entry.town}</td>
@@ -197,6 +254,9 @@ function displayEntries(entries, entriesTable) {
         `;
     entriesBody.appendChild(row);
   });
+
+  // Create and setup "Show More" button if there are more than 4 entries
+  setupShowMoreButton(entries.length);
 }
 
 // Load entries on page load

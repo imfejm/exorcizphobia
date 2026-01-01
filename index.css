@@ -1012,6 +1012,51 @@ footer a:hover {
   }
 }
 
+/* Show More Button for Concerts */
+.showMoreBtn {
+  display: none; /* Hidden by default (desktop) */
+  background-color: transparent;
+  width: 70%;
+  color: #cb2026;
+  border: 2px solid #cb2026;
+  font-family: rubik distressed;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  margin: 2rem auto;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  position: relative;
+}
+
+.showMoreBtn:hover {
+  background-color: #cb2026;
+  color: #f2ecec;
+}
+
+.showMoreBtn::after {
+  content: "↓";
+  display: block;
+  font-size: 1.5rem;
+  margin-top: 0.3rem;
+  transition: transform 0.3s ease;
+}
+
+.showMoreBtn.expanded::after {
+  transform: rotate(180deg);
+}
+
+/* Show button only on mobile */
+@media only screen and (max-width: 800px) {
+  .showMoreBtn {
+    display: block;
+  }
+
+  .entriesTable tr.hidden-row {
+    display: none;
+  }
+}
+
 /* Dark Mode */
 @media (prefers-color-scheme: dark) {
   body {
@@ -1099,6 +1144,14 @@ footer a:hover {
 
   footer a:hover {
     color: #f2ecec;
+  }
+
+  .showMoreBtn {
+    color: #f2ecec;
+  }
+
+  .showMoreBtn:hover {
+    color: #070c12;
   }
 
   /* Invert SVG colors for dark mode */
