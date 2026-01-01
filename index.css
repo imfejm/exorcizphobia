@@ -476,43 +476,59 @@ h2 {
   text-transform: uppercase;
 }
 
-/*.ufoL {
-  width: 70px;
+/* UFO Animations */
+.ufoL {
+  width: 80px;
   height: auto;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  position: absolute;
-  top: 120%;
-  left: 3%;
+  position: fixed;
+  top: 20%;
+  left: -100px;
+  z-index: 5000;
+  animation: flyLeftToRight 15s linear infinite;
+  animation-delay: 5s;
 }
+
 .ufoP {
-  width: 70px;
+  width: 80px;
   height: auto;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  position: absolute;
-  top: 145%;
-  right: 3%;
-}*/
+  position: fixed;
+  top: 60%;
+  right: -100px;
+  z-index: 5000;
+  animation: flyRightToLeft 18s linear infinite;
+}
+
+@keyframes flyLeftToRight {
+  0% {
+    left: -100px;
+    transform: translateX(0);
+  }
+  100% {
+    left: 100%;
+    transform: translateX(100px);
+  }
+}
+
+@keyframes flyRightToLeft {
+  0% {
+    right: -100px;
+    transform: translateX(0);
+  }
+  100% {
+    right: 100%;
+    transform: translateX(-100px);
+  }
+}
 
 @media only screen and (min-width: 800px) {
   .ufoL {
-    width: auto;
-    height: auto;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    position: absolute;
-    top: 120%;
-    left: 3%;
+    width: 120px;
+    animation: flyLeftToRight 20s linear infinite;
+    animation-delay: 5s;
   }
   .ufoP {
-    width: auto;
-    height: auto;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    position: absolute;
-    top: 145%;
-    right: 3%;
+    width: 120px;
+    animation: flyRightToLeft 25s linear infinite;
   }
 }
 
@@ -946,14 +962,10 @@ footer a:hover {
   }
 
   .ufoL {
-    width: 100px;
-    top: 110%;
-    left: 20%;
+    width: 140px;
   }
   .ufoP {
-    width: 100px;
-    top: 130%;
-    right: 20%;
+    width: 140px;
   }
   .merchbanner {
     max-width: 1350px;
