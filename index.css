@@ -335,7 +335,6 @@ a.nav-link {
   max-width: 800px;
   height: auto;
   object-fit: contain;
-  
 }
 
 .logoB.paused {
@@ -380,7 +379,7 @@ a.nav-link {
     height: 100vh;
   }
 }
-.stop1{
+.stop1 {
   display: flex;
   flex-direction: column;
   gap: 0;
@@ -390,15 +389,19 @@ a.nav-link {
   left: 50%;
   transform: translateX(-50%);
   z-index: 100;
+  padding-bottom: 20px;
 }
-.sipka1, .sipka2, .sipka3 {
+.sipka1,
+.sipka2,
+.sipka3 {
   width: 35px;
   height: auto;
   display: block;
   margin: 0;
   padding: 0;
 }
-.sipka2, .sipka3 {
+.sipka2,
+.sipka3 {
   margin-top: -20px;
 }
 .stop {
