@@ -179,20 +179,21 @@ function setupShowMoreButton(totalEntries) {
     const isExpanded = showMoreBtn.classList.contains("expanded");
 
     if (isExpanded) {
-      // Při sbírání - uložit pozici sekce koncertů
-      const koncertySection = document.querySelector(".koncerty");
-      const sectionTop = koncertySection.getBoundingClientRect().top + window.pageYOffset;
-
       // Collapse - hide rows again
       expandableRows.forEach((row) => {
         row.classList.add("hidden-row");
       });
 
       // Scrollovat na začátek sekce koncertů (s offsetem pro navigaci)
-      window.scrollTo({
-        top: sectionTop - 60, // 60px offset pro navigaci
-        behavior: 'smooth'
-      });
+      // Používáme setTimeout aby prohlížeč měl čas přepočítat layout po skrytí řádků
+      setTimeout(() => {
+        const koncertySection = document.querySelector(".koncerty");
+        const sectionTop = koncertySection.getBoundingClientRect().top + window.pageYOffset;
+        window.scrollTo({
+          top: sectionTop - 60, // 60px offset pro navigaci
+          behavior: 'smooth'
+        });
+      }, 0);
     } else {
       // Expand - show rows
       expandableRows.forEach((row) => {
