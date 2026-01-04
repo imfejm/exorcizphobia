@@ -389,7 +389,7 @@ a.nav-link {
   left: 50%;
   transform: translateX(-50%);
   z-index: 100;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 .sipka1,
 .sipka2,
