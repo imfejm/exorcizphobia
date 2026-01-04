@@ -170,7 +170,7 @@ function setupShowMoreButton(totalEntries) {
   showMoreBtn.className = "showMoreBtn";
   showMoreBtn.textContent = "více";
 
-  // Add button to the card
+  // Add button to card (after table)
   card.appendChild(showMoreBtn);
 
   // Add click event listener
