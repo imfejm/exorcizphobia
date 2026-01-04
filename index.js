@@ -184,16 +184,16 @@ function setupShowMoreButton(totalEntries) {
         row.classList.add("hidden-row");
       });
 
-      // Scrollovat na začátek sekce koncertů (s offsetem pro navigaci)
-      // Používáme setTimeout aby prohlížeč měl čas přepočítat layout po skrytí řádků
+      // Scrollovat na začátek sekce koncertů
       setTimeout(() => {
-        const koncertySection = document.querySelector(".koncerty");
-        const sectionTop = koncertySection.getBoundingClientRect().top + window.pageYOffset;
-        window.scrollTo({
-          top: sectionTop - 60, // 60px offset pro navigaci
-          behavior: 'smooth'
-        });
-      }, 0);
+        const koncertyAnchor = document.querySelector("#koncerty");
+        if (koncertyAnchor) {
+          koncertyAnchor.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      }, 50);
     } else {
       // Expand - show rows
       expandableRows.forEach((row) => {
