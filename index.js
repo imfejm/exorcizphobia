@@ -26,11 +26,19 @@ odkazy.forEach((link) => {
 function onScrollLogoS() {
   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
   const logoS = document.querySelector(".logoS");
+  const ham = document.querySelector(".ham");
+  const isMobile = window.innerWidth <= 500;
 
   if (scrollTop > 50) {
     logoS?.classList.add("visible");
+    if (isMobile) {
+      ham?.classList.add("visible");
+    }
   } else {
     logoS?.classList.remove("visible");
+    if (isMobile) {
+      ham?.classList.remove("visible");
+    }
   }
 }
 

@@ -56,6 +56,16 @@ body {
     font-size: 2rem;
     margin-right: 2%;
   }*/
+  .ham {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  .ham.visible {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 @media only screen and (min-width: 500px) {
   .line {
@@ -296,6 +306,7 @@ a.nav-link {
   background-size: auto 80vh;
   background-repeat: no-repeat;
   background-position: center;
+  position: relative;
 }
 .black {
   width: 100%;
@@ -324,6 +335,7 @@ a.nav-link {
   max-width: 800px;
   height: auto;
   object-fit: contain;
+  
 }
 
 .logoB.paused {
@@ -1092,10 +1104,6 @@ footer a:hover {
     background-color: #070c12;
   }
 
-  .black {
-    background-color: #f2ecec;
-  }
-
   .koncerty {
     background-color: #070c12;
     color: #f2ecec;
@@ -1160,13 +1168,17 @@ footer a:hover {
   .merchimg,
   .mediaimg,
   .organizerimg,
-  .uvod,
   .ufoL,
   .ufoP {
     filter: invert(1);
   }
 
-  /* Counter-invert logo to keep it white blinking in dark mode */
+  .uvod {
+    filter: invert(1);
+  }
+
+  /* Counter-invert to keep black element and logo correct in dark mode */
+  .black,
   .logoB {
     filter: invert(1);
   }
