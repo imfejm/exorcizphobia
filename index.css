@@ -731,9 +731,10 @@ h2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 3rem 10%;
+    gap: 6rem 30%;
     padding: 10% 0 10% 0;
-    justify-items: start;
+    justify-items: center;
+    justify-content: center;
     max-width: 80%;
     margin-left: auto;
     margin-right: auto;
@@ -746,7 +747,7 @@ h2 {
     display: grid;
     grid-template-rows: auto auto;
     grid-template-columns: auto 1fr;
-    gap: 1rem 4rem;
+    gap: 1rem 5rem;
     align-items: center;
     opacity: 0;
     transform: translateY(30px);
