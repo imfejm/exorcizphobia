@@ -24,7 +24,7 @@
       />
       <div class="menu">
         <a href="index.html#bio" class="bio" data-key="nav.bio">bio</a>
-        <a href="index.html#koncerty" class="koncerty" data-key="nav.contact"
+        <a href="index.html#koncerty" class="koncerty" data-key="nav.concerts"
           >koncerty</a
         >
         <a href="merch.html" class="merch" data-key="nav.merch">merch</a>
@@ -54,7 +54,7 @@
           <a class="nav-link" href="index.html#bio" data-key="nav.bio">bio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="index.html#koncerty" data-key="nav.contact"
+          <a class="nav-link" href="index.html#koncerty" data-key="nav.concerts"
             >koncerty</a
           >
         </li>
@@ -82,21 +82,21 @@
     </div>
     <div class="celek">
       <h2 data-key="media.title">informace pro média</h2>
-      <div class="souhrn" data-key="media.souhrn">
+      <div class="souhrn">
         <img
           src="img/exorcizphobia band.jpg"
           alt="exorcizphobia band photo"
           class="bandphoto"
         />
         <div class="text">
-          <p>
+          <p data-key="media.summary.p1">
             Kapela vznikla roku 2005 v Trutnově, kdy ji založili Tomáš Skořepa,
             Jan Erben a Jakub Václav. Jako parta mladých metalistů začali hrát
             covery svých vzorů jako Black Sabbath, Judas Priest či Slayer. Po
             příchodu kytaristy Josefa Valkouna začali tvořit vlastní materiál a
             objevovat se na lokálních pódiích.
           </p>
-          <p>
+          <p data-key="media.summary.p2">
             Debutové EP <i>Disease Inside</i> (2009) odstartovalo jejich
             nahrávací kariéru a následovalo první dlouhohrající album
             <i>Something Is Wrong</i> (2012). V roce 2010 se do historie kapely
@@ -105,7 +105,7 @@
             <strong>Obscene Extreme Festivalu</strong>, když jejich kytarista
             Spike Cassidy onemocněl.
           </p>
-          <p>
+          <p data-key="media.summary.p3">
             Po několika personálních změnách a dvou albech (<i
               >About Us Without Us</i
             >, <i>Digitotality</i>) kapela spojila síly s
@@ -114,13 +114,13 @@
             ocenění <strong>Anděl (česká Grammy)</strong> i
             <strong>Břitva Awards</strong>.
           </p>
-          <p>
+          <p data-key="media.summary.p4">
             V letech 2023–2025 kapela intenzivně koncertuje po Evropě, vystupuje
             s <strong>Voivod</strong>, <strong>Exhorder</strong> a dalšími
             legendami, a slaví <strong>20 let existence</strong> živým záznamem
             z <i>Monsters of Metal & HC</i>.
           </p>
-          <p>
+          <p data-key="media.summary.p5">
             V březnu 2026 vychází páté studiové album <i>Neurosis Unbound</i>,
             které spojuje klasický thrash s temnějšími a HC prvky a otevírá
             novou etapu v historii kapely.
@@ -350,12 +350,13 @@
       </div>
     </div>
     <footer>
-      <p>&copy; 2025 Exorcizphobia. Všechna práva vyhrazena.</p>
-      <p>vytvořeno:</p>
+      <p data-key="footer.rights">&copy; 2025 Exorcizphobia. Všechna práva vyhrazena.</p>
+      <p data-key="footer.created">vytvořeno:</p>
       <a href="https://imfejm.cz" target="_blank" rel="noopener noreferrer"
         >imfejm.cz</a
       >
     </footer>
+    <script src="i18n.js"></script>
     <script src="media.js"></script>
   </body>
 </html>

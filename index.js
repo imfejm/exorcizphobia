@@ -204,13 +204,16 @@ function setupShowMoreButton(totalEntries) {
     // Toggle button state
     showMoreBtn.classList.toggle("expanded");
 
-    // Change button text
+    // Change button text using i18n
     if (showMoreBtn.classList.contains("expanded")) {
-      showMoreBtn.textContent = "méně";
+      showMoreBtn.textContent = window.i18n ? window.i18n.t("concerts.less") : "méně";
     } else {
-      showMoreBtn.textContent = "více";
+      showMoreBtn.textContent = window.i18n ? window.i18n.t("concerts.more") : "více";
     }
   });
+
+  // Set initial text using i18n
+  showMoreBtn.textContent = window.i18n ? window.i18n.t("concerts.more") : "více";
 }
 
 // Load Entries

@@ -24,7 +24,7 @@
       />
       <div class="menu">
         <a href="#bio" class="bio" data-key="nav.bio">bio</a>
-        <a href="#koncerty" class="koncerty" data-key="nav.contact">koncerty</a>
+        <a href="#koncerty" class="koncerty" data-key="nav.concerts">koncerty</a>
         <a href="merch.html" class="merch" data-key="nav.merch">merch</a>
         <a href="#kontakt" class="kontakt" data-key="nav.contact">kontakt</a>
         <a href="media.html" class="media" data-key="nav.press">média</a>
@@ -50,7 +50,7 @@
           <a class="nav-link" href="#bio" data-key="nav.bio">bio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#koncerty" data-key="nav.contact"
+          <a class="nav-link" href="#koncerty" data-key="nav.concerts"
             >koncerty</a
           >
         </li>
@@ -94,7 +94,7 @@
     <div class="koncerty">
       <h2 data-key="concerts.upcoming">Nadcházející koncerty</h2>
       <div class="card">
-        <div class="tableLoading loading hidden">Načítám...</div>
+        <div class="tableLoading loading hidden" data-key="concerts.loading">Načítám...</div>
         <table class="entriesTable">
           <tbody class="entriesBody"></tbody>
         </table>
@@ -120,17 +120,17 @@
         class="logoblack"
       />
       <div class="biotext">
-        <p data-key="bio.content">
+        <p data-key="bio.content1">
           Exorcizphobia je thrash metalová kapela z Trutnova založená roku 2005.
           Kapela kombinuje rychlost a přesnost klasického thrash metalu s
           hardcoreovou intenzitou a moderním přístupem.
         </p>
-        <p data-key="bio.content">
+        <p data-key="bio.content2">
           Po získání Ceny Anděl (české Grammy) za album Spiritual Exodus se
           kapela vrací s nejosobnějším a nejintenzivnějším dílem – albem
           Neurosis Unbound (2026, Doomentia Records).
         </p>
-        <p data-key="bio.content">
+        <p data-key="bio.content3">
           Exorcizphobia jsou známí svými explozivními koncerty, evropskými
           turné, hraním a spoluprací s legendami jako Voivod, Exhorder, Napalm
           Death, Exodus, D.R.I. či Artillery, ale i účastí na velkých
@@ -282,12 +282,13 @@
       </div>
     </div>
     <footer>
-      <p>&copy; 2025 Exorcizphobia. Všechna práva vyhrazena.</p>
-      <p>vytvořeno:</p>
+      <p data-key="footer.rights">&copy; 2025 Exorcizphobia. Všechna práva vyhrazena.</p>
+      <p data-key="footer.created">vytvořeno:</p>
       <a href="https://imfejm.cz" target="_blank" rel="noopener noreferrer"
         >imfejm.cz</a
       >
     </footer>
+    <script src="i18n.js"></script>
     <script src="index.js"></script>
   </body>
 </html>
