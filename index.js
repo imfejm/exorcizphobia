@@ -282,3 +282,157 @@ function displayEntries(entries, entriesTable) {
 
 // Load entries on page load
 loadEntries();
+
+// Lightbox pro galerii
+const galleryItems = document.querySelectorAll(".gallery-item");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const lightboxClose = document.querySelector(".lightbox-close");
+const lightboxArrowLeft = document.querySelector(".lightbox-arrow-left");
+const lightboxArrowRight = document.querySelector(".lightbox-arrow-right");
+
+let currentLightboxIndex = 0;
+const largeImages = Array.from(galleryItems).map(item => item.getAttribute("data-large"));
+
+function showLightboxImage(index) {
+  currentLightboxIndex = index;
+  lightboxImg.src = largeImages[currentLightboxIndex];
+}
+
+galleryItems.forEach((item, index) => {
+  item.addEventListener("click", () => {
+    showLightboxImage(index);
+    lightbox.classList.add("active");
+    document.body.style.overflow = "hidden";
+  });
+});
+
+function closeLightbox() {
+  lightbox.classList.remove("active");
+  document.body.style.overflow = "";
+}
+
+lightboxClose.addEventListener("click", closeLightbox);
+
+lightbox.addEventListener("click", (e) => {
+  if (e.target === lightbox) {
+    closeLightbox();
+  }
+});
+
+lightboxArrowLeft.addEventListener("click", (e) => {
+  e.stopPropagation();
+  currentLightboxIndex = (currentLightboxIndex - 1 + largeImages.length) % largeImages.length;
+  showLightboxImage(currentLightboxIndex);
+});
+
+lightboxArrowRight.addEventListener("click", (e) => {
+  e.stopPropagation();
+  currentLightboxIndex = (currentLightboxIndex + 1) % largeImages.length;
+  showLightboxImage(currentLightboxIndex);
+});
+
+document.addEventListener("keydown", (e) => {
+  if (!lightbox.classList.contains("active")) return;
+
+  if (e.key === "Escape") {
+    closeLightbox();
+  } else if (e.key === "ArrowLeft") {
+    currentLightboxIndex = (currentLightboxIndex - 1 + largeImages.length) % largeImages.length;
+    showLightboxImage(currentLightboxIndex);
+  } else if (e.key === "ArrowRight") {
+    currentLightboxIndex = (currentLightboxIndex + 1) % largeImages.length;
+    showLightboxImage(currentLightboxIndex);
+  }
+});
+
+// Swipe gesta pro mobil
+let touchStartX = 0;
+let touchEndX = 0;
+const swipeThreshold = 50;
+
+function handleSwipe(onLeft, onRight) {
+  const diff = touchStartX - touchEndX;
+  if (Math.abs(diff) > swipeThreshold) {
+    if (diff > 0) {
+      onRight();
+    } else {
+      onLeft();
+    }
+  }
+}
+
+// Swipe v lightboxu
+lightbox.addEventListener("touchstart", (e) => {
+  touchStartX = e.changedTouches[0].screenX;
+}, { passive: true });
+
+lightbox.addEventListener("touchend", (e) => {
+  touchEndX = e.changedTouches[0].screenX;
+  handleSwipe(
+    () => {
+      currentLightboxIndex = (currentLightboxIndex - 1 + largeImages.length) % largeImages.length;
+      showLightboxImage(currentLightboxIndex);
+    },
+    () => {
+      currentLightboxIndex = (currentLightboxIndex + 1) % largeImages.length;
+      showLightboxImage(currentLightboxIndex);
+    }
+  );
+}, { passive: true });
+
+// Carousel - šipky
+const galleryArrowLeft = document.querySelector(".gallery-arrow-left");
+const galleryArrowRight = document.querySelector(".gallery-arrow-right");
+const galleryTrack = document.querySelector(".gallery-track");
+
+// Swipe v galerii (mobilní carousel)
+galleryTrack.addEventListener("touchstart", (e) => {
+  touchStartX = e.changedTouches[0].screenX;
+}, { passive: true });
+
+galleryTrack.addEventListener("touchend", (e) => {
+  touchEndX = e.changedTouches[0].screenX;
+  handleSwipe(
+    () => {
+      currentSlide = (currentSlide - 1 + galleryItems.length) % galleryItems.length;
+      updateCarousel();
+    },
+    () => {
+      currentSlide = (currentSlide + 1) % galleryItems.length;
+      updateCarousel();
+    }
+  );
+}, { passive: true });
+let currentSlide = 0;
+
+function isMobile() {
+  return window.innerWidth < 600;
+}
+
+function updateCarousel() {
+  galleryItems.forEach((item, index) => {
+    item.classList.toggle("active", index === currentSlide);
+  });
+}
+
+// Inicializace - první obrázek aktivní
+updateCarousel();
+
+galleryArrowLeft.addEventListener("click", () => {
+  if (isMobile()) {
+    currentSlide = (currentSlide - 1 + galleryItems.length) % galleryItems.length;
+    updateCarousel();
+  } else {
+    galleryTrack.scrollBy({ left: -300, behavior: "smooth" });
+  }
+});
+
+galleryArrowRight.addEventListener("click", () => {
+  if (isMobile()) {
+    currentSlide = (currentSlide + 1) % galleryItems.length;
+    updateCarousel();
+  } else {
+    galleryTrack.scrollBy({ left: 300, behavior: "smooth" });
+  }
+});
