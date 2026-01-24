@@ -286,3 +286,14 @@ a.nav-link {
 .hidden {
   display: none;
 }
+
+.smazat {
+  margin-top: 60px;
+}
+
+.temporary {
+  font-size: 1.2rem;
+  color: #070c12;
+  text-align: center;
+  margin-top: 0.5rem;
+}
