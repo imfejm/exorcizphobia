@@ -288,7 +288,7 @@ a.nav-link {
 }
 
 .smazat {
-  margin-top: 60px;
+  margin-top: 30%;
 }
 
 .temporary {
@@ -296,4 +296,108 @@ a.nav-link {
   color: #070c12;
   text-align: center;
   margin-top: 0.5rem;
+}
+
+.stop {
+  width: 100%;
+  height: 45px;
+}
+
+.contact {
+  width: 100%;
+  text-align: center;
+  padding: 2rem 0;
+  background-color: #070c12;
+  color: #f2ecec;
+}
+.contact img {
+  width: 50px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+.socialmedia {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+@media only screen and (min-width: 800px) {
+  .contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    padding: 2rem 0;
+    justify-items: center;
+  }
+
+  .socialmedia {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact img {
+    width: 60px;
+  }
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 2rem 0;
+  background-color: #070c12;
+  color: #f2ecec;
+  font-size: 14px;
+}
+
+footer a {
+  color: #cb2026;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #f2ecec;
+}
+
+/* Fix styles for viewports 1350px and above */
+@media only screen and (min-width: 1350px) {
+  .contact {
+    max-width: 1350px;
+    margin: 0 auto;
+  }
+
+  footer {
+    max-width: 1350px;
+    margin: 0 auto;
+  }
+  footer p {
+    font-size: 18px;
+  }
+
+  .stop {
+    max-width: 1350px;
+    margin: 0 auto;
+    height: 60px;
+  }
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  .contact {
+    background-color: #363636;
+    color: #f2ecec;
+  }
+
+  footer {
+    background-color: #363636;
+    color: #f2ecec;
+  }
+
+  footer a:hover {
+    color: #f2ecec;
+  }
 }
