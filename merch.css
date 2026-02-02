@@ -409,6 +409,35 @@ h2{
   font-family: sansation, sans-serif;;
 }
 
+.items .item .size-label {
+  display: block;
+  margin-top: 0.8em;
+  margin-bottom: 0.4em;
+  font-family: sansation, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.items .item .size-select {
+  width: 100%;
+  max-width: 200px;
+  padding: 0.5em;
+  background-color: #f2ecec;
+  color: #070c12;
+  border: 2px solid #cb2026;
+  border-radius: 3px;
+  font-family: montserrat, sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.items .item .size-select:hover,
+.items .item .size-select:focus {
+  outline: none;
+  border-color: #070c12;
+}
+
 .items .item .buy-button {
   margin-top: 1em;
   background-color: #cb2026;
@@ -523,6 +552,95 @@ h2{
   }
   .order-item-name {
     font-size: 0.85rem;
+  }
+}
+
+/* Order Form */
+.order-form-section {
+  width: 100%;
+  background-color: #070c12;
+  color: #f2ecec;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.order-form-section h2 {
+  font-family: sansation, sans-serif;
+  margin-bottom: 1.5rem;
+  color: #cb2026;
+}
+
+.order-form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-family: sansation, sans-serif;
+  font-size: 1rem;
+  color: #f2ecec;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea {
+  width: 100%;
+  padding: 0.7rem;
+  background-color: #1a2233;
+  color: #f2ecec;
+  border: 1px solid #cb2026;
+  border-radius: 3px;
+  font-family: montserrat, sans-serif;
+  font-size: 0.95rem;
+}
+
+.form-group textarea {
+  resize: vertical;
+  font-family: montserrat, sans-serif;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #f2ecec;
+}
+
+.submit-order {
+  width: 100%;
+  padding: 0.8em 1.5em;
+  background-color: #cb2026;
+  color: #f2ecec;
+  border: 2px solid #cb2026;
+  font-family: "Rubik Distressed", cursive;
+  font-size: 1.1rem;
+  cursor: pointer;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  border-radius: 3px;
+  margin-top: 1rem;
+}
+
+.submit-order:hover {
+  background-color: transparent;
+  color: #cb2026;
+}
+
+@media only screen and (max-width: 500px) {
+  .order-form-section {
+    padding: 1.5rem 1rem;
+  }
+  .form-group input,
+  .form-group textarea {
+    font-size: 0.9rem;
   }
 }
 
@@ -653,11 +771,27 @@ footer a:hover {
     color: #cb2026;
   }
 
+  .items .item .size-select {
+    background-color: #070c12;
+    color: #f2ecec;
+  }
+
   .order-summary {
     background-color: #1a1a1a;
   }
 
   .order-item-qty {
+    background-color: #2a2a2a;
+  }
+
+  .order-form-section {
+    background-color: #1a1a1a;
+  }
+
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group input[type="tel"],
+  .form-group textarea {
     background-color: #2a2a2a;
   }
 

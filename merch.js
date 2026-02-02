@@ -50,6 +50,28 @@ document.querySelectorAll(".cds-toggle .close-btn").forEach((btn) => {
   const orderItems = {};
   const orderSummary = document.getElementById("order-summary");
   const orderContainer = document.getElementById("order-items");
+  const orderFormSection = document.getElementById("order-form-section");
+  const orderListTextarea = document.getElementById("order-list");
+
+  function updateOrderList() {
+    const keys = Object.keys(orderItems);
+    if (keys.length === 0) {
+      orderListTextarea.value = "";
+      return;
+    }
+
+    let grandTotal = 0;
+    const orderText = keys
+      .map((name) => {
+        const item = orderItems[name];
+        const totalPrice = item.price * item.quantity;
+        grandTotal += totalPrice;
+        return `${name} - ${item.quantity}x (${item.price} Kč/ks, celkem ${totalPrice} Kč)`;
+      })
+      .join("\n");
+
+    orderListTextarea.value = `${orderText}\n\nCelková cena: ${grandTotal} Kč`;
+  }
 
   function renderOrder() {
     orderContainer.innerHTML = "";
@@ -57,10 +79,12 @@ document.querySelectorAll(".cds-toggle .close-btn").forEach((btn) => {
 
     if (keys.length === 0) {
       orderSummary.style.display = "none";
+      orderFormSection.style.display = "none";
       return;
     }
 
     orderSummary.style.display = "";
+    orderFormSection.style.display = "";
 
     keys.forEach((name) => {
       const row = document.createElement("div");
@@ -74,15 +98,16 @@ document.querySelectorAll(".cds-toggle .close-btn").forEach((btn) => {
       qty.type = "number";
       qty.className = "order-item-qty";
       qty.min = 1;
-      qty.value = orderItems[name];
+      qty.value = orderItems[name].quantity;
       qty.addEventListener("change", function () {
         const val = parseInt(this.value, 10);
         if (val > 0) {
-          orderItems[name] = val;
+          orderItems[name].quantity = val;
         } else {
           this.value = 1;
-          orderItems[name] = 1;
+          orderItems[name].quantity = 1;
         }
+        updateOrderList();
       });
 
       const removeBtn = document.createElement("button");
@@ -91,6 +116,7 @@ document.querySelectorAll(".cds-toggle .close-btn").forEach((btn) => {
       removeBtn.addEventListener("click", function () {
         delete orderItems[name];
         renderOrder();
+        updateOrderList();
       });
 
       row.appendChild(nameEl);
@@ -98,6 +124,8 @@ document.querySelectorAll(".cds-toggle .close-btn").forEach((btn) => {
       row.appendChild(removeBtn);
       orderContainer.appendChild(row);
     });
+
+    updateOrderList();
   }
 
   document.querySelectorAll(".buy-button").forEach(function (btn) {
@@ -106,11 +134,22 @@ document.querySelectorAll(".cds-toggle .close-btn").forEach((btn) => {
       const h3 = item ? item.querySelector("h3") : null;
       if (!h3) return;
 
-      const name = h3.textContent.trim();
+      let name = h3.textContent.trim();
+      const price = parseInt(btn.getAttribute("data-price") || "0", 10);
+
+      const sizeSelect = item.querySelector(".size-select");
+      if (sizeSelect) {
+        const size = sizeSelect.value;
+        name = `${name} (${size})`;
+      }
+
       if (orderItems[name]) {
-        orderItems[name]++;
+        orderItems[name].quantity++;
       } else {
-        orderItems[name] = 1;
+        orderItems[name] = {
+          quantity: 1,
+          price: price,
+        };
       }
 
       renderOrder();
