@@ -457,6 +457,75 @@ h2{
   }
 }
 
+/* Order Summary */
+.order-summary {
+  width: 100%;
+  background-color: #070c12;
+  color: #f2ecec;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.order-summary h2 {
+  font-family: sansation, sans-serif;
+  margin-bottom: 1.5rem;
+  color: #cb2026;
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.6rem 0.8rem;
+  border-bottom: 1px solid #1a2233;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.order-item-name {
+  flex: 1;
+  text-align: left;
+  font-family: sansation, sans-serif;
+  font-size: 0.95rem;
+}
+
+.order-item-qty {
+  width: 50px;
+  padding: 0.3em 0.4em;
+  text-align: center;
+  background-color: #1a2233;
+  color: #f2ecec;
+  border: 1px solid #cb2026;
+  border-radius: 3px;
+  font-family: montserrat, sans-serif;
+  font-size: 0.9rem;
+}
+
+.order-item-remove {
+  background: none;
+  border: none;
+  color: #cb2026;
+  font-size: 1.4rem;
+  cursor: pointer;
+  padding: 0 0.4rem;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.order-item-remove:hover {
+  color: #f2ecec;
+}
+
+@media only screen and (max-width: 500px) {
+  .order-item {
+    gap: 0.5rem;
+  }
+  .order-item-name {
+    font-size: 0.85rem;
+  }
+}
+
 .contact {
   width: 100%;
   text-align: center;
@@ -582,6 +651,14 @@ footer a:hover {
 
   .items .item .buy-button:hover {
     color: #cb2026;
+  }
+
+  .order-summary {
+    background-color: #1a1a1a;
+  }
+
+  .order-item-qty {
+    background-color: #2a2a2a;
   }
 
   .contact {

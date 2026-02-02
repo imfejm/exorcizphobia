@@ -34,6 +34,12 @@ const translations = {
     "media.more": "info pro média",
     "organizer.more": "info pro pořadatele",
 
+    // Order summary
+    "merch.order": "Objednávka",
+    "merch.orderEmpty": "Objednávka je prázdná",
+    "merch.remove": "Odebrat",
+    "merch.quantity": "Počet",
+
     // Contact section
     "contact.title": "Kontakt",
     "contact.email": "E-mail: info@exorcizphobia.com",
@@ -97,6 +103,12 @@ const translations = {
     // Media/Organizer links
     "media.more": "press info",
     "organizer.more": "organizer info",
+
+    // Order summary
+    "merch.order": "Order",
+    "merch.orderEmpty": "Order is empty",
+    "merch.remove": "Remove",
+    "merch.quantity": "Quantity",
 
     // Contact section
     "contact.title": "Contact",
