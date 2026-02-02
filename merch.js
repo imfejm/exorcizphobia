@@ -37,3 +37,10 @@ function onScrollLogoS() {
 window.addEventListener("scroll", onScrollLogoS);
 window.addEventListener("resize", onScrollLogoS);
 onScrollLogoS();
+
+// Krizek v kategorii - scroll nahoru
+document.querySelectorAll(".cds-toggle .close-btn").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+});
