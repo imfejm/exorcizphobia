@@ -93,7 +93,7 @@ if (merchBanner) {
     {
       threshold: 0,
       rootMargin: "0px",
-    }
+    },
   );
 
   observer.observe(merchBanner);
@@ -115,7 +115,7 @@ const slideObserver = new IntersectionObserver(
   {
     threshold: 0,
     rootMargin: "0px",
-  }
+  },
 );
 
 if (mediaBanner) {
@@ -128,7 +128,7 @@ if (organizerBanner) {
 
 //animace postupného objevování členů týmu
 const members = document.querySelectorAll(
-  ".member1, .member2, .member3, .member4"
+  ".member1, .member2, .member3, .member4",
 );
 
 const memberObserver = new IntersectionObserver(
@@ -143,7 +143,7 @@ const memberObserver = new IntersectionObserver(
   {
     threshold: 0.2,
     rootMargin: "0px",
-  }
+  },
 );
 
 members.forEach((member) => {
@@ -175,7 +175,9 @@ function setupShowMoreButton(totalEntries) {
 
   // Add click event listener
   showMoreBtn.addEventListener("click", () => {
-    const expandableRows = document.querySelectorAll('.entriesTable tr[data-expandable="true"]');
+    const expandableRows = document.querySelectorAll(
+      '.entriesTable tr[data-expandable="true"]',
+    );
     const isExpanded = showMoreBtn.classList.contains("expanded");
 
     if (isExpanded) {
@@ -189,8 +191,8 @@ function setupShowMoreButton(totalEntries) {
         const koncertyAnchor = document.querySelector("#koncerty");
         if (koncertyAnchor) {
           koncertyAnchor.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
+            behavior: "smooth",
+            block: "start",
           });
         }
       }, 50);
@@ -206,19 +208,25 @@ function setupShowMoreButton(totalEntries) {
 
     // Change button text using i18n
     if (showMoreBtn.classList.contains("expanded")) {
-      showMoreBtn.textContent = window.i18n ? window.i18n.t("concerts.less") : "méně";
+      showMoreBtn.textContent = window.i18n
+        ? window.i18n.t("concerts.less")
+        : "méně";
     } else {
-      showMoreBtn.textContent = window.i18n ? window.i18n.t("concerts.more") : "více";
+      showMoreBtn.textContent = window.i18n
+        ? window.i18n.t("concerts.more")
+        : "více";
     }
   });
 
   // Set initial text using i18n
-  showMoreBtn.textContent = window.i18n ? window.i18n.t("concerts.more") : "více";
+  showMoreBtn.textContent = window.i18n
+    ? window.i18n.t("concerts.more")
+    : "více";
 }
 
 // Load Entries
 async function loadEntries() {
-  const ENDPOINT = "https://exorcizphobia.com/server.php";
+  const ENDPOINT = "https://api.exorcizphobia.com/server.php";
   const tableLoading = document.querySelector(".tableLoading");
   const entriesTable = document.querySelector(".entriesTable");
 
@@ -274,7 +282,7 @@ function displayEntries(entries, entriesTable) {
             <td>${entry.town}</td>
             <td>${entry.venue}</td>
             <td>${entry.description}</td>
-            <td>${entry.link ? `<a href="${entry.link}" target="_blank" rel="noopener noreferrer">web události →</a>` : ''}</td>
+            <td>${entry.link ? `<a href="${entry.link}" target="_blank" rel="noopener noreferrer">web události →</a>` : ""}</td>
         `;
     entriesBody.appendChild(row);
   });
@@ -295,7 +303,9 @@ const lightboxArrowLeft = document.querySelector(".lightbox-arrow-left");
 const lightboxArrowRight = document.querySelector(".lightbox-arrow-right");
 
 let currentLightboxIndex = 0;
-const largeImages = Array.from(galleryItems).map(item => item.getAttribute("data-large"));
+const largeImages = Array.from(galleryItems).map((item) =>
+  item.getAttribute("data-large"),
+);
 
 function showLightboxImage(index) {
   currentLightboxIndex = index;
@@ -325,7 +335,8 @@ lightbox.addEventListener("click", (e) => {
 
 lightboxArrowLeft.addEventListener("click", (e) => {
   e.stopPropagation();
-  currentLightboxIndex = (currentLightboxIndex - 1 + largeImages.length) % largeImages.length;
+  currentLightboxIndex =
+    (currentLightboxIndex - 1 + largeImages.length) % largeImages.length;
   showLightboxImage(currentLightboxIndex);
 });
 
@@ -341,7 +352,8 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
     closeLightbox();
   } else if (e.key === "ArrowLeft") {
-    currentLightboxIndex = (currentLightboxIndex - 1 + largeImages.length) % largeImages.length;
+    currentLightboxIndex =
+      (currentLightboxIndex - 1 + largeImages.length) % largeImages.length;
     showLightboxImage(currentLightboxIndex);
   } else if (e.key === "ArrowRight") {
     currentLightboxIndex = (currentLightboxIndex + 1) % largeImages.length;
@@ -366,23 +378,32 @@ function handleSwipe(onLeft, onRight) {
 }
 
 // Swipe v lightboxu
-lightbox.addEventListener("touchstart", (e) => {
-  touchStartX = e.changedTouches[0].screenX;
-}, { passive: true });
+lightbox.addEventListener(
+  "touchstart",
+  (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  },
+  { passive: true },
+);
 
-lightbox.addEventListener("touchend", (e) => {
-  touchEndX = e.changedTouches[0].screenX;
-  handleSwipe(
-    () => {
-      currentLightboxIndex = (currentLightboxIndex - 1 + largeImages.length) % largeImages.length;
-      showLightboxImage(currentLightboxIndex);
-    },
-    () => {
-      currentLightboxIndex = (currentLightboxIndex + 1) % largeImages.length;
-      showLightboxImage(currentLightboxIndex);
-    }
-  );
-}, { passive: true });
+lightbox.addEventListener(
+  "touchend",
+  (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe(
+      () => {
+        currentLightboxIndex =
+          (currentLightboxIndex - 1 + largeImages.length) % largeImages.length;
+        showLightboxImage(currentLightboxIndex);
+      },
+      () => {
+        currentLightboxIndex = (currentLightboxIndex + 1) % largeImages.length;
+        showLightboxImage(currentLightboxIndex);
+      },
+    );
+  },
+  { passive: true },
+);
 
 // Carousel - šipky
 const galleryArrowLeft = document.querySelector(".gallery-arrow-left");
@@ -390,23 +411,32 @@ const galleryArrowRight = document.querySelector(".gallery-arrow-right");
 const galleryTrack = document.querySelector(".gallery-track");
 
 // Swipe v galerii (mobilní carousel)
-galleryTrack.addEventListener("touchstart", (e) => {
-  touchStartX = e.changedTouches[0].screenX;
-}, { passive: true });
+galleryTrack.addEventListener(
+  "touchstart",
+  (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  },
+  { passive: true },
+);
 
-galleryTrack.addEventListener("touchend", (e) => {
-  touchEndX = e.changedTouches[0].screenX;
-  handleSwipe(
-    () => {
-      currentSlide = (currentSlide - 1 + galleryItems.length) % galleryItems.length;
-      updateCarousel();
-    },
-    () => {
-      currentSlide = (currentSlide + 1) % galleryItems.length;
-      updateCarousel();
-    }
-  );
-}, { passive: true });
+galleryTrack.addEventListener(
+  "touchend",
+  (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe(
+      () => {
+        currentSlide =
+          (currentSlide - 1 + galleryItems.length) % galleryItems.length;
+        updateCarousel();
+      },
+      () => {
+        currentSlide = (currentSlide + 1) % galleryItems.length;
+        updateCarousel();
+      },
+    );
+  },
+  { passive: true },
+);
 let currentSlide = 0;
 
 function isMobile() {
@@ -424,7 +454,8 @@ updateCarousel();
 
 galleryArrowLeft.addEventListener("click", () => {
   if (isMobile()) {
-    currentSlide = (currentSlide - 1 + galleryItems.length) % galleryItems.length;
+    currentSlide =
+      (currentSlide - 1 + galleryItems.length) % galleryItems.length;
     updateCarousel();
   } else {
     galleryTrack.scrollBy({ left: -300, behavior: "smooth" });
