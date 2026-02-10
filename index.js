@@ -294,6 +294,19 @@ function displayEntries(entries, entriesTable) {
 // Load entries on page load
 loadEntries();
 
+// Po plném načtení stránky (včetně obrázků) znovu scrollovat na hash,
+// aby se kompenzoval layout shift
+window.addEventListener("load", () => {
+  if (window.location.hash) {
+    const target = document.querySelector(window.location.hash);
+    if (target) {
+      setTimeout(() => {
+        target.scrollIntoView();
+      }, 0);
+    }
+  }
+});
+
 // Lightbox pro galerii
 const galleryItems = document.querySelectorAll(".gallery-item");
 const lightbox = document.getElementById("lightbox");

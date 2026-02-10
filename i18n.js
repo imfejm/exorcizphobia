@@ -51,9 +51,9 @@ const translations = {
 
     // Bio section
     "bio.title": "Exorcizphobia",
-    "bio.content1": "Exorcizphobia je thrash metalová kapela z Trutnova založená roku 2005. Kapela kombinuje rychlost a přesnost klasického thrash metalu s hardcoreovou intenzitou a moderním přístupem.",
-    "bio.content2": "Po získání Ceny Anděl (české Grammy) za album Spiritual Exodus se kapela vrací s nejosobnějším a nejintenzivnějším dílem – albem Neurosis Unbound (2026, Doomentia Records).",
-    "bio.content3": "Exorcizphobia jsou známí svými explozivními koncerty, evropskými turné, hraním a spoluprací s legendami jako Voivod, Exhorder, Napalm Death, Exodus, D.R.I. či Artillery, ale i účastí na velkých festivalech typu Brutal Assault, Obscene Extreme, Mystic Festival, Tolminator a Czech Death Fest.",
+    "bio.content1": "Exorcizphobia je thrash metalová kapela z\u00A0Trutnova založená roku 2005. Kapela kombinuje rychlost a\u00A0přesnost klasického thrash metalu s\u00A0hardcoreovou intenzitou a\u00A0moderním přístupem.",
+    "bio.content2": "Po získání Ceny Anděl (české Grammy) za album Spiritual Exodus se kapela vrací s\u00A0nejosobnějším a\u00A0nejintenzivnějším dílem – albem Neurosis Unbound (2026, Doomentia Records).",
+    "bio.content3": "Exorcizphobia jsou známí svými explozivními koncerty, evropskými turné, hraním a\u00A0spoluprací s\u00A0legendami jako Voivod, Exhorder, Napalm Death, Exodus, D.R.I. či Artillery, ale i\u00A0účastí na velkých festivalech typu Brutal Assault, Obscene Extreme, Mystic Festival, Tolminator a\u00A0Czech Death Fest.",
     "bio.tomas": "kytara, vokál",
     "bio.ondra": "sólová kytara",
     "bio.ales": "baskytara",
@@ -93,11 +93,11 @@ const translations = {
 
     // Media page
     "media.title": "informace pro média",
-    "media.summary.p1": "Kapela vznikla roku 2005 v Trutnově, kdy ji založili Tomáš Skořepa, Jan Erben a Jakub Václav. Jako parta mladých metalistů začali hrát covery svých vzorů jako Black Sabbath, Judas Priest či Slayer. Po příchodu kytaristy Josefa Valkouna začali tvořit vlastní materiál a objevovat se na lokálních pódiích.",
-    "media.summary.p2": "Debutové EP <i>Disease Inside</i> (2009) odstartovalo jejich nahrávací kariéru a následovalo první dlouhohrající album <i>Something Is Wrong</i> (2012). V roce 2010 se do historie kapely zapsal nezapomenutelný okamžik – Tomáš Skořepa odehrál celý koncert s americkými <strong>D.R.I.</strong> na <strong>Obscene Extreme Festivalu</strong>, když jejich kytarista Spike Cassidy onemocněl.",
-    "media.summary.p3": "Po několika personálních změnách a dvou albech (<i>About Us Without Us</i>, <i>Digitotality</i>) kapela spojila síly s <strong>Doomentia Records</strong>, pod nimiž vydala <i>Spiritual Exodus</i> (2023). Album získalo široké uznání a ocenění <strong>Anděl (česká Grammy)</strong> i <strong>Břitva Awards</strong>.",
-    "media.summary.p4": "V letech 2023–2025 kapela intenzivně koncertuje po Evropě, vystupuje s <strong>Voivod</strong>, <strong>Exhorder</strong> a dalšími legendami, a slaví <strong>20 let existence</strong> živým záznamem z <i>Monsters of Metal & HC</i>.",
-    "media.summary.p5": "V březnu 2026 vychází páté studiové album <i>Neurosis Unbound</i>, které spojuje klasický thrash s temnějšími a HC prvky a otevírá novou etapu v historii kapely.",
+    "media.summary.p1": "Kapela vznikla roku 2005 v\u00A0Trutnově, kdy ji založili Tomáš Skořepa, Jan Erben a\u00A0Jakub Václav. Jako parta mladých metalistů začali hrát covery svých vzorů jako Black Sabbath, Judas Priest či Slayer. Po příchodu kytaristy Josefa Valkouna začali tvořit vlastní materiál a\u00A0objevovat se na\u00A0lokálních pódiích.",
+    "media.summary.p2": "Debutové EP <i>Disease Inside</i> (2009) odstartovalo jejich nahrávací kariéru a\u00A0následovalo první dlouhohrající album <i>Something Is Wrong</i> (2012). V\u00A0roce 2010 se do\u00A0historie kapely zapsal nezapomenutelný okamžik – Tomáš Skořepa odehrál celý koncert s\u00A0americkými <strong>D.R.I.</strong> na\u00A0<strong>Obscene Extreme Festivalu</strong>, když jejich kytarista Spike Cassidy onemocněl.",
+    "media.summary.p3": "Po několika personálních změnách a\u00A0dvou albech (<i>About Us Without Us</i>, <i>Digitotality</i>) kapela spojila síly s\u00A0<strong>Doomentia Records</strong>, pod nimiž vydala <i>Spiritual Exodus</i> (2023). Album získalo široké uznání a\u00A0ocenění <strong>Anděl (česká Grammy)</strong> i\u00A0<strong>Břitva Awards</strong>.",
+    "media.summary.p4": "V\u00A0letech 2023–2025 kapela intenzivně koncertuje po Evropě, vystupuje s\u00A0<strong>Voivod</strong>, <strong>Exhorder</strong> a\u00A0dalšími legendami, a\u00A0slaví <strong>20 let existence</strong> živým záznamem z\u00A0<i>Monsters of\u00A0Metal & HC</i>.",
+    "media.summary.p5": "V\u00A0březnu 2026 vychází páté studiové album <i>Neurosis Unbound</i>, které spojuje klasický thrash s\u00A0temnějšími a\u00A0HC prvky a\u00A0otevírá novou etapu v\u00A0historii kapely.",
     "media.videos.title": "oficiální videa",
     "media.podcast.title": "podcasty",
     "media.download.title": "soubory ke stažení",
@@ -159,7 +159,7 @@ const translations = {
 
     // Bio section
     "bio.title": "Exorcizphobia",
-    "bio.content1": "Exorcizphobia is a thrash metal band from Trutnov, Czech Republic, founded in 2005. The band combines the speed and precision of classic thrash metal with hardcore intensity and a modern approach.",
+    "bio.content1": "Exorcizphobia is a\u00A0thrash metal band from Trutnov, Czech Republic, founded in 2005. The band combines the speed and precision of classic thrash metal with hardcore intensity and a\u00A0modern approach.",
     "bio.content2": "After winning the Anděl Award (Czech Grammy) for the album Spiritual Exodus, the band returns with their most personal and intense work – the album Neurosis Unbound (2026, Doomentia Records).",
     "bio.content3": "Exorcizphobia are known for their explosive live shows, European tours, playing and collaborating with legends like Voivod, Exhorder, Napalm Death, Exodus, D.R.I. and Artillery, as well as participating in major festivals such as Brutal Assault, Obscene Extreme, Mystic Festival, Tolminator and Czech Death Fest.",
     "bio.tomas": "guitar, vocals",
@@ -201,11 +201,11 @@ const translations = {
 
     // Media page
     "media.title": "press information",
-    "media.summary.p1": "The band was formed in 2005 in Trutnov by Tomáš Skořepa, Jan Erben and Jakub Václav. As a group of young metalheads, they started playing covers of their idols like Black Sabbath, Judas Priest and Slayer. After guitarist Josef Valkoun joined, they began creating original material and appearing on local stages.",
+    "media.summary.p1": "The band was formed in 2005 in Trutnov by Tomáš Skořepa, Jan Erben and Jakub Václav. As a\u00A0group of young metalheads, they started playing covers of their idols like Black Sabbath, Judas Priest and Slayer. After guitarist Josef Valkoun joined, they began creating original material and appearing on local stages.",
     "media.summary.p2": "The debut EP <i>Disease Inside</i> (2009) launched their recording career, followed by the first full-length album <i>Something Is Wrong</i> (2012). In 2010, an unforgettable moment was written into the band's history – Tomáš Skořepa played an entire concert with American <strong>D.R.I.</strong> at <strong>Obscene Extreme Festival</strong> when their guitarist Spike Cassidy fell ill.",
     "media.summary.p3": "After several lineup changes and two albums (<i>About Us Without Us</i>, <i>Digitotality</i>), the band joined forces with <strong>Doomentia Records</strong>, under which they released <i>Spiritual Exodus</i> (2023). The album received wide acclaim and won both the <strong>Anděl Award (Czech Grammy)</strong> and <strong>Břitva Awards</strong>.",
-    "media.summary.p4": "Between 2023–2025, the band toured extensively across Europe, performed with <strong>Voivod</strong>, <strong>Exhorder</strong> and other legends, and celebrated <strong>20 years of existence</strong> with a live recording from <i>Monsters of Metal & HC</i>.",
-    "media.summary.p5": "In March 2026, the fifth studio album <i>Neurosis Unbound</i> is released, combining classic thrash with darker and HC elements and opening a new chapter in the band's history.",
+    "media.summary.p4": "Between 2023–2025, the band toured extensively across Europe, performed with <strong>Voivod</strong>, <strong>Exhorder</strong> and other legends, and celebrated <strong>20 years of existence</strong> with a\u00A0live recording from <i>Monsters of\u00A0Metal & HC</i>.",
+    "media.summary.p5": "In March 2026, the fifth studio album <i>Neurosis Unbound</i> is released, combining classic thrash with darker and HC elements and opening a\u00A0new chapter in the band's history.",
     "media.videos.title": "official videos",
     "media.podcast.title": "podcasts",
     "media.download.title": "downloads",
