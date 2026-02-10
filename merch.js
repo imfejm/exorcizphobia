@@ -157,3 +157,39 @@ document.querySelectorAll(".cds-toggle .close-btn").forEach((btn) => {
     });
   });
 })();
+
+// ===== EmailJS init =====
+(function () {
+  emailjs.init("QKtk8brvGOkQX-zvU"); // ← sem vlož svůj Public Key
+})();
+
+// ===== Odeslání formuláře =====
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("order-form");
+
+  if (!form) {
+    console.error("Formulář #order-form nebyl nalezen");
+    return;
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_gvdjnxs", // SERVICE ID
+        "template_7sgldul", // TEMPLATE ID
+        form,
+      )
+      .then(
+        function () {
+          alert("Objednávka byla úspěšně odeslána!");
+          form.reset();
+        },
+        function (error) {
+          alert("Nepodařilo se odeslat objednávku. Zkuste to prosím znovu.");
+          console.error("EmailJS error:", error);
+        },
+      );
+  });
+});

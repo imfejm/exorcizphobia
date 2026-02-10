@@ -781,28 +781,28 @@
       <h2 data-key="merch.orderForm">Odeslat objednávku</h2>
       <form id="order-form" class="order-form">
         <div class="form-group">
-          <label for="customer-name" data-key="merch.form.name">Jméno a příjmení:</label>
-          <input type="text" id="customer-name" name="customer-name" required>
+          <label for="customer_name" data-key="merch.form.name">Jméno a příjmení:</label>
+          <input type="text" id="customer-name" name="customer_name" required>
         </div>
 
         <div class="form-group">
-          <label for="customer-email" data-key="merch.form.email">E-mail:</label>
-          <input type="email" id="customer-email" name="customer-email" required>
+          <label for="customer_email" data-key="merch.form.email">E-mail:</label>
+          <input type="email" id="customer-email" name="customer_email" required>
         </div>
 
         <div class="form-group">
-          <label for="customer-phone" data-key="merch.form.phone">Telefon:</label>
-          <input type="tel" id="customer-phone" name="customer-phone">
+          <label for="customer_phone" data-key="merch.form.phone">Telefon:</label>
+          <input type="tel" id="customer-phone" name="customer_phone">
         </div>
 
         <div class="form-group">
-          <label for="order-list" data-key="merch.form.items">Vybrané položky:</label>
-          <textarea id="order-list" name="order-list" rows="6" readonly></textarea>
+          <label for="order_list" data-key="merch.form.items">Vybrané položky:</label>
+          <textarea id="order-list" name="order_list" rows="6" readonly></textarea>
         </div>
 
         <div class="form-group">
-          <label for="customer-message" data-key="merch.form.message">Poznámka:</label>
-          <textarea id="customer-message" name="customer-message" rows="4"></textarea>
+          <label for="customer_message" data-key="merch.form.message">Poznámka:</label>
+          <textarea id="customer-message" name="customer_message" rows="4"></textarea>
         </div>
 
         <button type="submit" class="submit-order" data-key="merch.form.submit">Odeslat objednávku</button>
@@ -881,6 +881,10 @@
       >
     </footer>
     <script src="i18n.js"></script>
+        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script src="/js/order-form.js" defer></script>
     <script src="merch.js"></script>
+
+
   </body>
 </html>
