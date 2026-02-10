@@ -295,7 +295,6 @@ a.nav-link {
   margin-top: 30%;
 }
 
-
 .merch {
   width: 100%;
 }
@@ -304,28 +303,32 @@ a.nav-link {
   width: 100%;
   height: 45px;
 }
-.intro{
+.intro {
   max-width: 80%;
   margin-left: auto;
   margin-right: auto;
-  padding:  3rem 1rem 1rem 1rem;
+  padding: 3rem 1rem 1rem 1rem;
   font-size: 17px;
   line-height: 1.6;
 }
-h2{
-  font-family: sansation, sans-serif;;
+h2 {
+  font-family: sansation, sans-serif;
   color: #cb2026;
+  padding-bottom: 2rem;
 }
 .title {
-  color:#070c12;}
+  color: #070c12;
+}
 
-.hudba, .textil{
+.hudba,
+.textil {
   padding: 50px 10px 20px 10px;
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
 }
-.hudba > h2, .textil > h2 {
+.hudba > h2,
+.textil > h2 {
   margin-bottom: 0;
 }
 .hudba .hudba {
@@ -339,22 +342,49 @@ h2{
 .cds-toggle summary {
   cursor: pointer;
   list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .cds-toggle summary::-webkit-details-marker {
   display: none;
 }
 
-.cds-toggle summary {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .cds-toggle summary h2 {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
+  width: 30%;
+  background-color: transparent;
+  border: 2px solid #cb2026;
+  border-radius: 3px;
+  padding: 0.4em 1.2em;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  margin: 0.3rem 0;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  box-shadow: rgb(201, 46, 70) 0px 5px 0px 0px;
+}
+
+.cds-toggle summary h2:hover {
+  background-color: #cb2026;
+  color: #f2ecec;
+  box-shadow: rgb(201, 46, 70) 0px 7px 0px 0px;
+  background-color: rgb(255, 56, 86);
+  /*50, 168, 80*/
+  box-shadow: rgb(201, 46, 70) 0px 0px 0px 0px;
+  transform: translateY(5px);
+  transition: 200ms;
+}
+
+.cds-toggle[open] summary h2 {
+  background-color: #cb2026;
+  color: #f2ecec;
 }
 
 .cds-toggle summary h2::after {
@@ -396,7 +426,7 @@ h2{
 
 @media only screen and (max-width: 800px) {
   .cds-toggle summary h2 {
-    margin-left: 2rem;
+    margin-left: 0;
   }
 
   .cds-toggle[open] summary .close-btn {
@@ -425,7 +455,7 @@ h2{
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: sansation, sans-serif;;
+  font-family: sansation, sans-serif;
 }
 
 .items .item .size-label {
@@ -777,12 +807,17 @@ footer a:hover {
     color: #070c12;
   }
 
-  .title{
-    color:#f2ecec
+  .title {
+    color: #f2ecec;
   }
   .hudba,
   .textil {
     color: #f2ecec;
+  }
+
+  .cds-toggle summary h2 {
+    box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.15);
+    box-shadow: rgb(201, 46, 70) 0px 5px 0px 0px;
   }
 
   .items .item .buy-button {
