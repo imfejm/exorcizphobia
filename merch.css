@@ -763,6 +763,42 @@ footer a:hover {
 
 /* Fix styles for viewports 1350px and above */
 @media only screen and (min-width: 1350px) {
+  body {
+    overflow-x: clip;
+    font-size: 20px;
+  }
+
+  .line {
+    overflow: visible;
+    max-width: 1350px;
+    margin: 0 auto;
+    height: 60px;
+  }
+
+  .menu a {
+    font-size: 24.3px;
+    margin: 13.5px;
+  }
+
+  .lang-btn {
+    font-size: 21.6px;
+  }
+
+  .merch {
+    max-width: 1350px;
+    margin: 0 auto;
+  }
+
+  .order-summary {
+    max-width: 1350px;
+    margin: 0 auto;
+  }
+
+  .order-form-section {
+    max-width: 1350px;
+    margin: 0 auto;
+  }
+
   .contact {
     max-width: 1350px;
     margin: 0 auto;

@@ -84,8 +84,10 @@ const translations = {
     "contact.phone": "Telefon: +420733430334",
 
     // Footer
-    "footer.rights": "© 2025 Exorcizphobia. Všechna práva vyhrazena.",
+    "footer.rights": "© 2026 Exorcizphobia. Všechna práva vyhrazena.",
     "footer.created": "vytvořeno:",
+    "footer.design": "grafika: Michel \"Away\" Langevin",
+    "footer.photos": "fotky: Petr Ovsík, Pavel Kovalančík",
 
     // Gallery aria labels
     "gallery.prev": "Předchozí",
@@ -192,8 +194,10 @@ const translations = {
     "contact.phone": "Phone: +420733430334",
 
     // Footer
-    "footer.rights": "© 2025 Exorcizphobia. All rights reserved.",
+    "footer.rights": "© 2026 Exorcizphobia. All rights reserved.",
     "footer.created": "created by:",
+    "footer.design": "artwork: Michel \"Away\" Langevin",
+    "footer.photos": "photos: Petr Ovsík, Pavel Kovalančík",
 
     // Gallery aria labels
     "gallery.prev": "Previous",
