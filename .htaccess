@@ -1,4 +1,4 @@
-# Cache static assets
+# Cache static assets via mod_expires
 <IfModule mod_expires.c>
   ExpiresActive On
 
@@ -22,6 +22,39 @@
 
   # HTML - 1 hour
   ExpiresByType text/html "access plus 1 hour"
+</IfModule>
+
+# Cache static assets via mod_headers (fallback)
+<IfModule mod_headers.c>
+  # Images - 1 year (31536000 seconds)
+  <FilesMatch "\.(webp|jpg|jpeg|png|gif|svg|ico)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+
+  # CSS & JS - 1 month (2592000 seconds)
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+
+  # Fonts - 1 year
+  <FilesMatch "\.(woff|woff2|ttf|eot)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+
+  # PDF - 1 month
+  <FilesMatch "\.pdf$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+
+  # MP3 - 1 month
+  <FilesMatch "\.mp3$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+
+  # HTML - 1 hour (3600 seconds)
+  <FilesMatch "\.html$">
+    Header set Cache-Control "public, max-age=3600"
+  </FilesMatch>
 </IfModule>
 
 # Compress text-based files
