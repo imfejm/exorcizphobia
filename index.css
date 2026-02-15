@@ -533,10 +533,11 @@ h2 {
   height: auto;
   position: fixed;
   top: 20%;
-  left: -100px;
+  left: 0;
   z-index: 5000;
   animation: flyLeftToRight 15s linear infinite;
   animation-delay: 5s;
+  will-change: transform;
 }
 
 .ufoP {
@@ -544,29 +545,26 @@ h2 {
   height: auto;
   position: fixed;
   top: 60%;
-  right: -100px;
+  left: 0;
   z-index: 5000;
   animation: flyRightToLeft 18s linear infinite;
+  will-change: transform;
 }
 
 @keyframes flyLeftToRight {
   0% {
-    left: -100px;
-    transform: translateX(0);
+    transform: translateX(-100px);
   }
   100% {
-    left: 100%;
-    transform: translateX(100px);
+    transform: translateX(100vw);
   }
 }
 
 @keyframes flyRightToLeft {
   0% {
-    right: -100px;
-    transform: translateX(0);
+    transform: translateX(100vw);
   }
   100% {
-    right: 100%;
     transform: translateX(-100px);
   }
 }

@@ -2,13 +2,16 @@
 const tlacitko = document.querySelector("#ham");
 const rozbal = document.querySelector("#menu");
 const odkazy = rozbal.querySelectorAll("a");
+const cara1 = document.querySelector("#cara1");
+const cara2 = document.querySelector("#cara2");
+const cara3 = document.querySelector("#cara3");
 
 tlacitko.addEventListener("click", () => {
   rozbal.classList.toggle("hidden");
 
-  document.querySelector("#cara1").classList.toggle("caraA");
-  document.querySelector("#cara2").classList.toggle("caraB");
-  document.querySelector("#cara3").classList.toggle("caraC");
+  cara1.classList.toggle("caraA");
+  cara2.classList.toggle("caraB");
+  cara3.classList.toggle("caraC");
 });
 
 // Zavření menu po kliknutí na jakýkoli odkaz
@@ -16,17 +19,23 @@ odkazy.forEach((link) => {
   link.addEventListener("click", () => {
     rozbal.classList.add("hidden");
 
-    document.querySelector("#cara1").classList.remove("caraA");
-    document.querySelector("#cara2").classList.remove("caraB");
-    document.querySelector("#cara3").classList.remove("caraC");
+    cara1.classList.remove("caraA");
+    cara2.classList.remove("caraB");
+    cara3.classList.remove("caraC");
   });
 });
 
-//logo do horní lišty
-function onScrollLogoS() {
+//logo do horní lišty + zastavení animace – společný scroll handler
+const logoS = document.querySelector(".logoS");
+const ham = document.querySelector(".ham");
+const uvod = document.querySelector(".uvod");
+const black = document.querySelector(".black");
+const logoB = document.querySelector(".logoB");
+
+let scrollTicking = false;
+
+function onScrollHandler() {
   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  const logoS = document.querySelector(".logoS");
-  const ham = document.querySelector(".ham");
   const isMobile = window.innerWidth <= 500;
 
   if (scrollTop > 50) {
@@ -40,42 +49,36 @@ function onScrollLogoS() {
       ham?.classList.remove("visible");
     }
   }
+
+  if (uvod && black && logoB) {
+    const rect = uvod.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+    const visibleHeight =
+      Math.min(rect.bottom, windowHeight) - Math.max(rect.top, 0);
+    const visibilityPercentage = (visibleHeight / rect.height) * 100;
+
+    if (visibilityPercentage <= 50) {
+      black.classList.add("paused");
+      logoB.classList.add("paused");
+    } else {
+      black.classList.remove("paused");
+      logoB.classList.remove("paused");
+    }
+  }
+
+  scrollTicking = false;
 }
 
-window.addEventListener("scroll", onScrollLogoS);
-window.addEventListener("resize", onScrollLogoS);
-onScrollLogoS();
-
-//zastavení animace při 50% viditelnosti
-function checkAnimationVisibility() {
-  const uvod = document.querySelector(".uvod");
-  const black = document.querySelector(".black");
-  const logoB = document.querySelector(".logoB");
-
-  if (!uvod || !black || !logoB) return;
-
-  const rect = uvod.getBoundingClientRect();
-  const windowHeight = window.innerHeight;
-
-  // Vypočítá, kolik % sekce je viditelné
-  const visibleHeight =
-    Math.min(rect.bottom, windowHeight) - Math.max(rect.top, 0);
-  const totalHeight = rect.height;
-  const visibilityPercentage = (visibleHeight / totalHeight) * 100;
-
-  // Když je viditelnost 50% nebo méně, zastaví animaci
-  if (visibilityPercentage <= 50) {
-    black.classList.add("paused");
-    logoB.classList.add("paused");
-  } else {
-    black.classList.remove("paused");
-    logoB.classList.remove("paused");
+function onScroll() {
+  if (!scrollTicking) {
+    requestAnimationFrame(onScrollHandler);
+    scrollTicking = true;
   }
 }
 
-window.addEventListener("scroll", checkAnimationVisibility);
-window.addEventListener("resize", checkAnimationVisibility);
-checkAnimationVisibility();
+window.addEventListener("scroll", onScroll, { passive: true });
+window.addEventListener("resize", onScroll);
+onScrollHandler();
 
 //animace příjezdu merchbanner zprava
 const merchBanner = document.querySelector(".merchbanner");
