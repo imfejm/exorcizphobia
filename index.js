@@ -35,9 +35,19 @@ const logoB = document.querySelector(".logoB");
 let scrollTicking = false;
 
 function onScrollHandler() {
+  // Reads first (avoid forced reflow)
   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
   const isMobile = window.innerWidth <= 500;
+  let visibilityPercentage = 100;
+  if (uvod && black && logoB) {
+    const rect = uvod.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+    const visibleHeight =
+      Math.min(rect.bottom, windowHeight) - Math.max(rect.top, 0);
+    visibilityPercentage = (visibleHeight / rect.height) * 100;
+  }
 
+  // Writes after all reads
   if (scrollTop > 50) {
     logoS?.classList.add("visible");
     if (isMobile) {
@@ -51,12 +61,6 @@ function onScrollHandler() {
   }
 
   if (uvod && black && logoB) {
-    const rect = uvod.getBoundingClientRect();
-    const windowHeight = window.innerHeight;
-    const visibleHeight =
-      Math.min(rect.bottom, windowHeight) - Math.max(rect.top, 0);
-    const visibilityPercentage = (visibleHeight / rect.height) * 100;
-
     if (visibilityPercentage <= 50) {
       black.classList.add("paused");
       logoB.classList.add("paused");
