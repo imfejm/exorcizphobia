@@ -308,7 +308,7 @@ a.nav-link {
 .uvod {
   width: 100%;
   height: 80vh;
-  background-image: url("img/NeurosisUnbound.webp");
+  background-image: url("img/NeurosisUnboundMobile.webp");
   background-size: auto 80vh;
   background-repeat: no-repeat;
   background-position: center;
@@ -379,6 +379,7 @@ a.nav-link {
 @media only screen and (min-width: 500px) {
   .uvod {
     height: 100vh;
+    background-image: url("img/NeurosisUnbound.webp");
     background-size: auto 100%;
   }
   .black {
