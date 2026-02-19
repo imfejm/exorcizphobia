@@ -515,9 +515,6 @@ h2 {
   display: block;
 }
 
-.items .item .merchimg-small {
-  max-width: 100px;
-}
 
 .textil .merchimg {
   filter: drop-shadow(0 0 15px #fff);
