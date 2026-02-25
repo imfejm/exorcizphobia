@@ -108,6 +108,11 @@ const translations = {
     // Organizer page
     "organizer.title": "Pro pořadatele",
     "organizer.subtitle": "ke stažení:",
+
+    // Logo downloads
+    "logo.black.preview": "Logo černé (náhled)",
+    "logo.white.preview": "Logo bílé (náhled)",
+    "logo.old": "Logo staré (pdf)",
   },
 
   en: {
@@ -218,6 +223,11 @@ const translations = {
     // Organizer page
     "organizer.title": "For Organizers",
     "organizer.subtitle": "downloads:",
+
+    // Logo downloads
+    "logo.black.preview": "Logo black (preview)",
+    "logo.white.preview": "Logo white (preview)",
+    "logo.old": "Logo old (pdf)",
   },
 };
 
