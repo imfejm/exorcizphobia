@@ -269,7 +269,11 @@ function displayEntries(entries, entriesTable) {
   const entriesBody = document.querySelector(".entriesBody");
   entriesBody.innerHTML = "";
 
-  entries.forEach((entry, index) => {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const upcoming = entries.filter((e) => new Date(e.date) >= today);
+
+  upcoming.forEach((entry, index) => {
     // Format date to Czech format (den. měsíc. rok)
     const date = new Date(entry.date);
     const day = date.getDate();
@@ -295,7 +299,7 @@ function displayEntries(entries, entriesTable) {
   });
 
   // Create and setup "Show More" button if there are more than 4 entries
-  setupShowMoreButton(entries.length);
+  setupShowMoreButton(upcoming.length);
 }
 
 // Load entries on page load
