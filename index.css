@@ -631,6 +631,19 @@ h2 {
   color: #f2ecec;
 }
 
+.fb-feed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 1rem;
+  background-color: #070c12;
+}
+
+.fb-feed h2 {
+  color: #f2ecec;
+}
+
 .logoblack {
   max-width: 90%;
   height: auto;

@@ -60,6 +60,7 @@ const translations = {
     "bio.tomaskejkrt": "bicí",
 
     // Media/Organizer links
+    "fb.title": "Aktuality",
     "media.more": "info pro média",
     "organizer.more": "info pro pořadatele",
 
@@ -175,6 +176,7 @@ const translations = {
     "bio.tomaskejkrt": "drums",
 
     // Media/Organizer links
+    "fb.title": "News",
     "media.more": "press info",
     "organizer.more": "organizer info",
 
