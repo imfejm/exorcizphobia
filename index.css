@@ -644,6 +644,14 @@ h2 {
   color: #f2ecec;
 }
 
+@media only screen and (max-width: 499px) {
+  .fb-feed iframe {
+    transform: scale(0.65);
+    transform-origin: top center;
+    margin-bottom: -175px;
+  }
+}
+
 .logoblack {
   max-width: 90%;
   height: auto;
