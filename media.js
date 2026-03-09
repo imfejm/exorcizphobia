@@ -41,7 +41,7 @@ onScrollLogoS();
 // Toggle videos visibility
 const videosHeading = document.querySelector('.videa h2');
 const arrow = document.querySelector('.videa h2 .arrow');
-const videos = document.querySelectorAll('.video1, .video2, .video3, .video4');
+const videos = document.querySelectorAll('.video1, .video2, .video3, .video4, .video5, .video6');
 
 if (videosHeading && arrow) {
   videosHeading.addEventListener('click', () => {

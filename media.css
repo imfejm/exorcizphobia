@@ -384,7 +384,9 @@ h3 {
 .video1,
 .video2,
 .video3,
-.video4 {
+.video4,
+.video5,
+.video6 {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
@@ -395,7 +397,9 @@ h3 {
 .video1.show,
 .video2.show,
 .video3.show,
-.video4.show {
+.video4.show,
+.video5.show,
+.video6.show {
   max-height: 1000px;
   opacity: 1;
 }
@@ -458,7 +462,9 @@ h3 {
   .video1,
   .video2,
   .video3,
-  .video4 {
+  .video4,
+  .video5,
+  .video6 {
     max-height: none;
     opacity: 1;
   }

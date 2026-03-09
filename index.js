@@ -303,17 +303,14 @@ function displayEntries(entries, entriesTable) {
 }
 
 // Load entries on page load
-loadEntries();
-
-// Po plném načtení stránky (včetně obrázků) znovu scrollovat na hash,
-// aby se kompenzoval layout shift
-window.addEventListener("load", () => {
+// Po načtení koncertů scrollovat na hash, aby layout shift neposunul pozici
+loadEntries().then(() => {
   if (window.location.hash) {
     const target = document.querySelector(window.location.hash);
     if (target) {
       setTimeout(() => {
         target.scrollIntoView();
-      }, 0);
+      }, 50);
     }
   }
 });
