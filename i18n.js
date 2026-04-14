@@ -18,7 +18,7 @@ const translations = {
 
     // Merch section
     "merch.banner": "Oficiální merch exorcizphobia",
-    "merch.ticker": "Merch k Neurosis Unbound bude k objednání v dubnu \u2014 stay tuned!\u00a0\u00a0\u00a0\u2605\u00a0\u00a0\u00a0Merch k Neurosis Unbound bude k objednání v dubnu \u2014 stay tuned!\u00a0\u00a0\u00a0\u2605\u00a0\u00a0\u00a0",
+    "merch.ticker": "Merch k Neurosis Unbound právě naskladněn! Kromě vinylů, tam ještě chvilku napětí...\u00a0\u00a0\u00a0\u2605\u00a0\u00a0\u00a0Merch k Neurosis Unbound právě naskladněn! Kromě vinylů, tam ještě chvilku napětí...\u00a0\u00a0\u00a0\u2605\u00a0\u00a0\u00a0",
     "merch.intro": "Pro\u00a0objednání merche slouží poptávkový formulář. Naklikej si, o\u00a0co\u00a0máš zájem, uprav počet a\u00a0velikosti. Vyplň ve\u00a0formuláři své\u00a0kontaktní údaje. My ověříme, zda je věc skladem a\u00a0domluvíme\u00a0si zaslání a\u00a0platbu.",
     "merch.shop": "Pro merch tudy",
     "merch.title": "Hudba",
@@ -136,7 +136,7 @@ const translations = {
 
     // Merch section
     "merch.banner": "Official Exorcizphobia merch",
-    "merch.ticker": "Neurosis Unbound merch available to order in April \u2014 stay tuned!\u00a0\u00a0\u00a0\u2605\u00a0\u00a0\u00a0Neurosis Unbound merch available to order in April \u2014 stay tuned!\u00a0\u00a0\u00a0\u2605\u00a0\u00a0\u00a0",
+    "merch.ticker": "Neurosis Unbound merch is in stock! Vinyls coming soon — stay tuned...\u00a0\u00a0\u00a0\u2605\u00a0\u00a0\u00a0Neurosis Unbound merch is in stock! Vinyls coming soon — stay tuned...\u00a0\u00a0\u00a0\u2605\u00a0\u00a0\u00a0",
     "merch.intro": "To order merch, use the inquiry form. Select what you want, adjust quantities and sizes. Fill in your contact details in the form. We will check availability and arrange shipping and payment.",
     "merch.shop": "Get merch here",
     "merch.title": "Music",
