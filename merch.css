@@ -529,6 +529,28 @@ h2 {
   border-radius: 3px;
 }
 
+.items .item .buy-button.added {
+  background-color: #4a7c4e;
+  color: #f2ecec;
+  border-color: #4a7c4e;
+}
+
+.added-arrow {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 6px 12px;
+  font-size: 0.9em;
+  color: #4a7c4e;
+  background-color: transparent;
+  border: 2px solid #4a7c4e;
+  border-radius: 3px;
+  vertical-align: middle;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: inherit;
+  font-weight: bold;
+}
+
 .items .item .buy-button:hover {
   background-color: transparent;
   color: #cb2026;

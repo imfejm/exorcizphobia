@@ -153,7 +153,19 @@ document.querySelectorAll(".cds-toggle .close-btn").forEach((btn) => {
       }
 
       renderOrder();
-      orderSummary.scrollIntoView({ behavior: "smooth" });
+      if (!btn.classList.contains("added")) {
+        btn.classList.add("added");
+        const arrow = document.createElement("a");
+        const lang = window.i18n?.getCurrentLang() || "cs";
+        arrow.textContent = lang === "en" ? " ↓ fill in below" : " ↓ dole vyplň";
+        arrow.className = "added-arrow";
+        arrow.href = "#order-form-section";
+        arrow.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.getElementById("order-form-section")?.scrollIntoView({ behavior: "smooth" });
+        });
+        btn.insertAdjacentElement("afterend", arrow);
+      }
     });
   });
 })();
